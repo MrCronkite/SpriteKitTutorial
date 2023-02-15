@@ -13,7 +13,7 @@ class GameScene: SKScene {
     private var currentNode: SKNode?
     
     override func didMove(to view: SKView) {
-        if let grid = Grid(blockSize: 70.0, rows:5, cols:5) {
+        if let grid = Grid(blockSize: 50.0, rows:3, cols:5) {
             grid.position = CGPoint (x:frame.midX, y:frame.midY)
             addChild(grid)
             
