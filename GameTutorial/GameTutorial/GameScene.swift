@@ -12,10 +12,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var move = -50
     var sprite: SKNode!
+    var timer: Timer!
+    var timerLabelNode: SKLabelNode!
+    var time = 60
     
     override func didMove(to view: SKView) {
         
-       // sprite1 = self.childNode(withName: "sprite1")
+        timerLabelNode = (self.childNode(withName: "labelNode") as! SKLabelNode)
         
         let swipeRight: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipeRight))
         let swipeLeft: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipeLeft))
@@ -33,6 +36,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         view.addGestureRecognizer(swipeLeft)
         view.addGestureRecognizer(swipeRight)
         
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(onTimerFires), userInfo: nil, repeats: true)
+    }
+    
+    @objc func onTimerFires() {
+        time -= 1
+        timerLabelNode.text = "\(time)"
+        
+        if time <= 0 {
+            timer.invalidate()
+            timer = nil
+        }
     }
     
     @objc func swipeDown(sender: UISwipeGestureRecognizer) {
@@ -96,8 +110,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("konec")
-        //self.sprite.physicsBody?.pinned = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            self.sprite.physicsBody?.pinned = true
+        }
+        
     }
     
     
