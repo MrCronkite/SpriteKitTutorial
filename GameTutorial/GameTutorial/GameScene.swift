@@ -17,6 +17,47 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
        // sprite1 = self.childNode(withName: "sprite1")
         
+        let swipeRight: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipeRight))
+        let swipeLeft: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipeLeft))
+        let swipeUp: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipeUp))
+        let swipeDown: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipeDown))
+        
+        
+        swipeRight.direction = .right
+        swipeLeft.direction = .left
+        swipeUp.direction = .up
+        swipeDown.direction = .down
+        
+        view.addGestureRecognizer(swipeUp)
+        view.addGestureRecognizer(swipeDown)
+        view.addGestureRecognizer(swipeLeft)
+        view.addGestureRecognizer(swipeRight)
+        
+    }
+    
+    @objc func swipeDown(sender: UISwipeGestureRecognizer) {
+        let moveSprite = SKAction.move(by: CGVector(dx: 0, dy: -50), duration: 0.2)
+        sprite.run(moveSprite)
+        //sprite.physicsBody?.pinned = true
+        
+    }
+    
+    @objc func swipeUp(sender: UISwipeGestureRecognizer) {
+        let moveSprite = SKAction.move(by: CGVector(dx: 0, dy: 50), duration: 0.2)
+        sprite.run(moveSprite)
+        //sprite.physicsBody?.pinned = true
+    }
+
+    @objc func swipeRight(sender: UISwipeGestureRecognizer) {
+        let moveSprite = SKAction.move(by: CGVector(dx: 50, dy: 0), duration: 0.2)
+        sprite.run(moveSprite)
+        //sprite.physicsBody?.pinned = true
+    }
+    
+    @objc func swipeLeft(sender: UISwipeGestureRecognizer) {
+        let moveSprite = SKAction.move(by: CGVector(dx: -50, dy: 0), duration: 0.2)
+        sprite.run(moveSprite)
+        //sprite.physicsBody?.pinned = true
     }
     
     
@@ -34,7 +75,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                        
             let touchedNodes = self.nodes(at: location)
             for node in touchedNodes.reversed() {
-                self.sprite = node
+                if node.name == "sprite" {
+                    node.physicsBody?.pinned = false
+                    self.sprite = node
+                    
+                }
             }
         }
         
@@ -47,17 +92,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.move *= -1
-        let moveSprite = SKAction.move(by: CGVector(dx: self.move, dy: 0), duration: 1)
-        sprite.physicsBody?.pinned = false
-        sprite.run(moveSprite)
-    }
-    
-    func didBegin(_ contact: SKPhysicsContact) {
-        print(contact)
+        self.sprite = nil
     }
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("konec")
+        //self.sprite.physicsBody?.pinned = true
     }
     
     
