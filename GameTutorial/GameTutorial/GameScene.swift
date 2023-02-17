@@ -80,7 +80,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func stopGame() {
+        guard self.sprite != nil else { return }
         gameOverLabel.run(SKAction.fadeIn(withDuration: 0.5))
+        self.sprite.physicsBody?.pinned = true
     }
     
     
