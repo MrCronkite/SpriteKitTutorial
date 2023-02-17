@@ -14,11 +14,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var sprite: SKNode!
     var timer: Timer!
     var timerLabelNode: SKLabelNode!
+    var gameOverLabel: SKLabelNode!
     var time = 60
     
     override func didMove(to view: SKView) {
         
         timerLabelNode = (self.childNode(withName: "labelNode") as! SKLabelNode)
+        
+        gameOverLabel = (self.childNode(withName: "gameOver") as! SKLabelNode)
+        
+        gameOverLabel.alpha = 0
         
         let swipeRight: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipeRight))
         let swipeLeft: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipeLeft))
@@ -46,32 +51,36 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if time <= 0 {
             timer.invalidate()
             timer = nil
+            stopGame()
         }
     }
     
     @objc func swipeDown(sender: UISwipeGestureRecognizer) {
+        guard sprite != nil else { return }
         let moveSprite = SKAction.move(by: CGVector(dx: 0, dy: -50), duration: 0.2)
         sprite.run(moveSprite)
-        //sprite.physicsBody?.pinned = true
-        
     }
     
     @objc func swipeUp(sender: UISwipeGestureRecognizer) {
+        guard sprite != nil else { return }
         let moveSprite = SKAction.move(by: CGVector(dx: 0, dy: 50), duration: 0.2)
         sprite.run(moveSprite)
-        //sprite.physicsBody?.pinned = true
     }
 
     @objc func swipeRight(sender: UISwipeGestureRecognizer) {
+        guard sprite != nil else { return }
         let moveSprite = SKAction.move(by: CGVector(dx: 50, dy: 0), duration: 0.2)
         sprite.run(moveSprite)
-        //sprite.physicsBody?.pinned = true
     }
     
     @objc func swipeLeft(sender: UISwipeGestureRecognizer) {
+        guard sprite != nil else { return }
         let moveSprite = SKAction.move(by: CGVector(dx: -50, dy: 0), duration: 0.2)
         sprite.run(moveSprite)
-        //sprite.physicsBody?.pinned = true
+    }
+    
+    func stopGame() {
+        gameOverLabel.run(SKAction.fadeIn(withDuration: 0.5))
     }
     
     
@@ -92,11 +101,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 if node.name == "sprite" {
                     node.physicsBody?.pinned = false
                     self.sprite = node
-                    
                 }
             }
         }
-        
     }
     
     
@@ -111,6 +118,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            guard self.sprite != nil else { return }
             self.sprite.physicsBody?.pinned = true
         }
         
