@@ -57,25 +57,25 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     @objc func swipeDown(sender: UISwipeGestureRecognizer) {
         guard sprite != nil else { return }
-        let moveSprite = SKAction.move(by: CGVector(dx: 0, dy: -50), duration: 0.2)
+        let moveSprite = SKAction.move(by: CGVector(dx: 0, dy: -64), duration: 0.2)
         sprite.run(moveSprite)
     }
     
     @objc func swipeUp(sender: UISwipeGestureRecognizer) {
         guard sprite != nil else { return }
-        let moveSprite = SKAction.move(by: CGVector(dx: 0, dy: 50), duration: 0.2)
+        let moveSprite = SKAction.move(by: CGVector(dx: 0, dy: 64), duration: 0.2)
         sprite.run(moveSprite)
     }
 
     @objc func swipeRight(sender: UISwipeGestureRecognizer) {
         guard sprite != nil else { return }
-        let moveSprite = SKAction.move(by: CGVector(dx: 50, dy: 0), duration: 0.2)
+        let moveSprite = SKAction.move(by: CGVector(dx: 93, dy: 0), duration: 0.2)
         sprite.run(moveSprite)
     }
     
     @objc func swipeLeft(sender: UISwipeGestureRecognizer) {
         guard sprite != nil else { return }
-        let moveSprite = SKAction.move(by: CGVector(dx: -50, dy: 0), duration: 0.2)
+        let moveSprite = SKAction.move(by: CGVector(dx: -93, dy: 0), duration: 0.2)
         sprite.run(moveSprite)
     }
     
