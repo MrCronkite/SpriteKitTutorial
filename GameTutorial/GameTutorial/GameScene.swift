@@ -24,7 +24,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         background.zPosition = -4
         background.size = self.size
         background.position = CGPoint(x: 0, y: 0)
-        print(background.position)
+        print(background.size)
         addChild(background)
         
         timerLabelNode = (self.childNode(withName: "labelNode") as! SKLabelNode)
