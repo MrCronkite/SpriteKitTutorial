@@ -25,8 +25,10 @@ class MenuGameScene: SKScene {
         spriteImageGirl.size = CGSize(width: bounds.size.width / 2.7 , height: bounds.size.height)
         spriteImageGirl.position = CGPoint(x: -280, y: 0)
         
-        buttonLvl.position = CGPoint(x: 0, y: -80)
+        buttonLvl.position = CGPoint(x: 0, y: -100)
+        buttonLvl.name = "buttonLvl"
         buttonPlay.position = CGPoint(x: 0, y: -20)
+        buttonPlay.name = "buttonPlay"
         
         addChild(buttonLvl)
         addChild(buttonPlay)
@@ -36,6 +38,33 @@ class MenuGameScene: SKScene {
         
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let touch = touches.first {
+            let location = touch.location(in: self)
+                       
+            let touchedNodes = self.nodes(at: location)
+            for node in touchedNodes.reversed() {
+                switch node.name {
+                case "buttonPlay": openPlayScene()
+                case "buttonLvl": print("lvl")
+                default: continue
+                }
+            }
+        }
+    }
     
+    private func openPlayScene() {
+        if let view = self.view {
+            if let scene = SKScene(fileNamed: "GameScene") {
+                let bounds = UIScreen.main.bounds
+                scene.size = CGSize(width: bounds.size.width, height: bounds.size.height)
+                scene.scaleMode = .aspectFill
+              
+                view.presentScene(scene, transition: .moveIn(with: .right, duration: 1))
+            }
+            
+            view.ignoresSiblingOrder = true
+        }
+    }
     
 }
