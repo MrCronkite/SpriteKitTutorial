@@ -15,7 +15,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var timer: Timer!
     var timerLabelNode: SKLabelNode!
     var gameOverLabel: SKLabelNode!
-    var time = 60
+    var time = 10
     var background = SKSpriteNode(imageNamed: "bgImage")
     
     
@@ -91,19 +91,21 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func stopGame() {
-        guard self.sprite != nil else { return }
         gameOverLabel.run(SKAction.fadeIn(withDuration: 0.5))
-        self.sprite.physicsBody?.pinned = true
-    }
-    
-    
-    func touchDown(atPoint pos : CGPoint) {
         
+        if let view = self.view {
+            if let scene = SKScene(fileNamed: "MenuGameScene") {
+                let bounds = UIScreen.main.bounds
+                scene.size = CGSize(width: bounds.size.width, height: bounds.size.height)
+                scene.scaleMode = .aspectFill
+
+                view.presentScene(scene, transition: .moveIn(with: .down, duration: 1))
+            }
+
+            view.ignoresSiblingOrder = true
+        }
     }
     
-    func touchMoved(toPoint pos : CGPoint) {
-        
-    }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {

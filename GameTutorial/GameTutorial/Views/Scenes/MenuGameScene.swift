@@ -46,7 +46,7 @@ class MenuGameScene: SKScene {
             for node in touchedNodes.reversed() {
                 switch node.name {
                 case "buttonPlay": openPlayScene()
-                case "buttonLvl": print("lvl")
+                case "buttonLvl": openLvlScene()
                 default: continue
                 }
             }
@@ -54,8 +54,28 @@ class MenuGameScene: SKScene {
     }
     
     private func openPlayScene() {
+        let scale = SKAction.scale(to: 0.9, duration: 0.1)
+        let sequence = SKAction.sequence([scale])
+        buttonPlay.run(sequence)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2){
         if let view = self.view {
             if let scene = SKScene(fileNamed: "GameScene") {
+                let bounds = UIScreen.main.bounds
+                scene.size = CGSize(width: bounds.size.width, height: bounds.size.height)
+                scene.scaleMode = .aspectFill
+                
+                view.presentScene(scene, transition: .moveIn(with: .right, duration: 1))
+            }
+            
+            view.ignoresSiblingOrder = true
+        }
+    }
+    }
+    
+    private func openLvlScene() {
+        if let view = self.view {
+            if let scene = SKScene(fileNamed: "LevelsScene") {
                 let bounds = UIScreen.main.bounds
                 scene.size = CGSize(width: bounds.size.width, height: bounds.size.height)
                 scene.scaleMode = .aspectFill
@@ -66,5 +86,6 @@ class MenuGameScene: SKScene {
             view.ignoresSiblingOrder = true
         }
     }
+
     
 }

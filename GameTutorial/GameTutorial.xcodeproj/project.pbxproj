@@ -15,6 +15,8 @@
 		B254EBE7299D48EE005B5FC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B254EBE5299D48EE005B5FC0 /* Main.storyboard */; };
 		B254EBE9299D48F0005B5FC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B254EBE8299D48F0005B5FC0 /* Assets.xcassets */; };
 		B254EBEC299D48F0005B5FC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B254EBEA299D48F0005B5FC0 /* LaunchScreen.storyboard */; };
+		B268609D29A2AAF600303C69 /* LevelsScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B268609C29A2AAF600303C69 /* LevelsScene.sks */; };
+		B268609F29A2AB0D00303C69 /* LevelsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B268609E29A2AB0D00303C69 /* LevelsScene.swift */; };
 		B2B9DC1E29A00812005E6FC9 /* MenuGameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B2B9DC1D29A00812005E6FC9 /* MenuGameScene.sks */; };
 		B2B9DC2229A0094F005E6FC9 /* MenuGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B9DC2129A0094F005E6FC9 /* MenuGameScene.swift */; };
 /* End PBXBuildFile section */
@@ -29,6 +31,8 @@
 		B254EBE6299D48EE005B5FC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B254EBE8299D48F0005B5FC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B254EBEB299D48F0005B5FC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B268609C29A2AAF600303C69 /* LevelsScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = LevelsScene.sks; sourceTree = "<group>"; };
+		B268609E29A2AB0D00303C69 /* LevelsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsScene.swift; sourceTree = "<group>"; };
 		B2B9DC1D29A00812005E6FC9 /* MenuGameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MenuGameScene.sks; sourceTree = "<group>"; };
 		B2B9DC2129A0094F005E6FC9 /* MenuGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuGameScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,13 +68,31 @@
 			isa = PBXGroup;
 			children = (
 				B2B9DC1A29A006DC005E6FC9 /* Support Files */,
-				B254EBDD299D48EE005B5FC0 /* GameScene.sks */,
-				B254EBE1299D48EE005B5FC0 /* GameScene.swift */,
-				B254EBE3299D48EE005B5FC0 /* GameViewController.swift */,
-				B2B9DC1D29A00812005E6FC9 /* MenuGameScene.sks */,
-				B2B9DC2129A0094F005E6FC9 /* MenuGameScene.swift */,
+				B268609B29A2AA8800303C69 /* Views */,
 			);
 			path = GameTutorial;
+			sourceTree = "<group>";
+		};
+		B268609A29A2AA4200303C69 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				B2B9DC2129A0094F005E6FC9 /* MenuGameScene.swift */,
+				B254EBDD299D48EE005B5FC0 /* GameScene.sks */,
+				B254EBE1299D48EE005B5FC0 /* GameScene.swift */,
+				B2B9DC1D29A00812005E6FC9 /* MenuGameScene.sks */,
+				B268609C29A2AAF600303C69 /* LevelsScene.sks */,
+				B268609E29A2AB0D00303C69 /* LevelsScene.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		B268609B29A2AA8800303C69 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B254EBE3299D48EE005B5FC0 /* GameViewController.swift */,
+				B268609A29A2AA4200303C69 /* Scenes */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		B2B9DC1A29A006DC005E6FC9 /* Support Files */ = {
@@ -147,6 +169,7 @@
 				B254EBDE299D48EE005B5FC0 /* GameScene.sks in Resources */,
 				B254EBE9299D48F0005B5FC0 /* Assets.xcassets in Resources */,
 				B2B9DC1E29A00812005E6FC9 /* MenuGameScene.sks in Resources */,
+				B268609D29A2AAF600303C69 /* LevelsScene.sks in Resources */,
 				B254EBEC299D48F0005B5FC0 /* LaunchScreen.storyboard in Resources */,
 				B254EBE0299D48EE005B5FC0 /* Actions.sks in Resources */,
 			);
@@ -162,6 +185,7 @@
 				B254EBE2299D48EE005B5FC0 /* GameScene.swift in Sources */,
 				B254EBE4299D48EE005B5FC0 /* GameViewController.swift in Sources */,
 				B254EBDC299D48EE005B5FC0 /* AppDelegate.swift in Sources */,
+				B268609F29A2AB0D00303C69 /* LevelsScene.swift in Sources */,
 				B2B9DC2229A0094F005E6FC9 /* MenuGameScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
