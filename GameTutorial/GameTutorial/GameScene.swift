@@ -18,11 +18,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var time = 60
     var background = SKSpriteNode(imageNamed: "bgImage")
     
+    
+    
     override func didMove(to view: SKView) {
-        var bounds = UIScreen.main.bounds
-        self.size = CGSize(width: bounds.size.width, height: bounds.size.height)
+        
+        let bounds = UIScreen.main.bounds
+        print(self.size)
+        background.size = CGSize(width: bounds.size.width, height: bounds.size.height)
         background.zPosition = -4
-        background.size = self.size
         background.position = CGPoint(x: 0, y: 0)
         print(background.size)
         addChild(background)

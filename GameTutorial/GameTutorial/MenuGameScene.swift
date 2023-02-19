@@ -10,11 +10,19 @@ import GameplayKit
 
 class MenuGameScene: SKScene {
     
-    var spriteLvl1: SKNode!
+    var background = SKSpriteNode(imageNamed: "bgImage")
     
     override func didMove(to view: SKView) {
         
-        spriteLvl1 = childNode(withName: "lvl1")
+        let bounds = UIScreen.main.bounds
+        //self.size = CGSize(width: bounds.size.width, height: bounds.size.height)
+        background.size = CGSize(width: bounds.size.height, height: bounds.size.width)
+        background.zRotation = .pi / 2
+        background.zPosition = -4
+        background.position = CGPoint(x: 0, y: 0)
+        print(background.size)
+        addChild(background)
+        
         
     }
     
