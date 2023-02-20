@@ -15,10 +15,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var timer: Timer!
     var timerLabelNode: SKLabelNode!
     var gameOverLabel: SKLabelNode!
-    var time = 10
+    var time = 20
     var background = SKSpriteNode(imageNamed: "bgImage")
     var timeBar: SKSpriteNode!
-    
+    var lvlBar: SKSpriteNode!
     
     
     override func didMove(to view: SKView) {
@@ -29,15 +29,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         background.position = CGPoint(x: 0, y: 0)
         print(background.size)
         
-        timeBar = self.childNode(withName: timeBar)
+        timeBar = (self.childNode(withName: "timeBar") as! SKSpriteNode)
+        timeBar.position = CGPoint(x: 0, y: (bounds.size.height/2 - 22) )
+        lvlBar = (self.childNode(withName: "lvlBar") as! SKSpriteNode)
+        lvlBar.position = CGPoint(x: 0, y: -(bounds.size.height/2 - 22) )
         
+        timerLabelNode = SKLabelNode(text: "10")
+        timerLabelNode.position = CGPoint(x: 10, y: -9)
+        timerLabelNode.zPosition = 4
+        
+        timeBar.addChild(timerLabelNode)
         addChild(background)
         
-        timerLabelNode = (self.childNode(withName: "labelNode") as! SKLabelNode)
         
-        gameOverLabel = (self.childNode(withName: "gameOver") as! SKLabelNode)
-        
-        gameOverLabel.alpha = 0
+        //gameOverLabel.alpha = 0
         
         let swipeRight: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipeRight))
         let swipeLeft: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipeLeft))
@@ -71,30 +76,30 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     @objc func swipeDown(sender: UISwipeGestureRecognizer) {
         guard sprite != nil else { return }
-        let moveSprite = SKAction.move(by: CGVector(dx: 0, dy: -64), duration: 0.2)
+        let moveSprite = SKAction.move(by: CGVector(dx: 0, dy: -101), duration: 0.1)
         sprite.run(moveSprite)
     }
     
     @objc func swipeUp(sender: UISwipeGestureRecognizer) {
         guard sprite != nil else { return }
-        let moveSprite = SKAction.move(by: CGVector(dx: 0, dy: 64), duration: 0.2)
+        let moveSprite = SKAction.move(by: CGVector(dx: 0, dy: 101), duration: 0.1)
         sprite.run(moveSprite)
     }
 
     @objc func swipeRight(sender: UISwipeGestureRecognizer) {
         guard sprite != nil else { return }
-        let moveSprite = SKAction.move(by: CGVector(dx: 93, dy: 0), duration: 0.2)
+        let moveSprite = SKAction.move(by: CGVector(dx: 130, dy: 0), duration: 0.1)
         sprite.run(moveSprite)
     }
     
     @objc func swipeLeft(sender: UISwipeGestureRecognizer) {
         guard sprite != nil else { return }
-        let moveSprite = SKAction.move(by: CGVector(dx: -93, dy: 0), duration: 0.2)
+        let moveSprite = SKAction.move(by: CGVector(dx: -130, dy: 0), duration: 0.1)
         sprite.run(moveSprite)
     }
     
     func stopGame() {
-        gameOverLabel.run(SKAction.fadeIn(withDuration: 0.5))
+       // gameOverLabel.run(SKAction.fadeIn(withDuration: 0.5))
         
         if let view = self.view {
             if let scene = SKScene(fileNamed: "MenuGameScene") {
