@@ -10,7 +10,7 @@ import GameplayKit
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
-    var move = -50
+    var dictSprite = [String: CGPoint]()
     var sprite: SKNode!
     var timer: Timer!
     var timerLabelNode: SKLabelNode!
@@ -19,7 +19,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var background = SKSpriteNode(imageNamed: "bgImage")
     var timeBar: SKSpriteNode!
     var lvlBar: SKSpriteNode!
-    
+    var spriteSwipe: SKSpriteNode!
     
     override func didMove(to view: SKView) {
         
@@ -117,12 +117,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        dictSprite = ["sprite1": CGPoint(x: -260, y: 101), "sprite2": CGPoint(x: -130, y: 101), "sprite3": CGPoint(x:-0 , y: 101), "sprite4": CGPoint(x: 130, y: 101), "sprite5": CGPoint(x: 260, y: 101), "sprite6": CGPoint(x: -260, y: 0), "sprite7": CGPoint(x: 130, y: 0), "sprite8": CGPoint(x: 0, y: 0), "sprite9": CGPoint(x: 130, y: 0), "sprite10": CGPoint(x: 260, y: 0), "sprite11": CGPoint(x: -260, y: -101), "sprite12": CGPoint(x: -130, y: -101), "sprite13": CGPoint(x: 0, y: -101), "sprite14": CGPoint(x: 130, y: -101), "sprite15": CGPoint(x: 260, y: -101)]
         if let touch = touches.first {
             let location = touch.location(in: self)
-                       
             let touchedNodes = self.nodes(at: location)
             for node in touchedNodes.reversed() {
-                if node.name == "sprite" {
+                if dictSprite[node.name ?? ""] != nil {
                     node.physicsBody?.pinned = false
                     self.sprite = node
                 }
@@ -141,7 +141,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            var item = 0
+            for (key, value) in self.dictSprite {
+                if let spriteSwipe = self.childNode(withName: key) as? SKSpriteNode {
+                    var rageX = Int(value.x) - Int(round(spriteSwipe.position.x*10)/10)
+                    var rageY = Int(value.y) - Int(round(spriteSwipe.position.y*10)/10)
+                    if rageX >= -2 && rageX <= 2 && rageY >= -2 && rageY <= 2 {
+                        item += 1
+                    }
+                }
+            }
+            item == 14 ? print("победа") : print("fff")
             guard self.sprite != nil else { return }
             self.sprite.physicsBody?.pinned = true
         }
