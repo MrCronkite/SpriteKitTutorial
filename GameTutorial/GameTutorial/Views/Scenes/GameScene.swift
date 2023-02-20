@@ -15,7 +15,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var timer: Timer!
     var timerLabelNode: SKLabelNode!
     var gameOverLabel: SKLabelNode!
-    var time = 20
+    var time = 200
     var background = SKSpriteNode(imageNamed: "bgImage")
     var timeBar: SKSpriteNode!
     var lvlBar: SKSpriteNode!
@@ -31,12 +31,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         timeBar = (self.childNode(withName: "timeBar") as! SKSpriteNode)
         timeBar.position = CGPoint(x: 0, y: (bounds.size.height/2 - 22) )
+        timeBar.zPosition = 2
         lvlBar = (self.childNode(withName: "lvlBar") as! SKSpriteNode)
         lvlBar.position = CGPoint(x: 0, y: -(bounds.size.height/2 - 22) )
         
         timerLabelNode = SKLabelNode(text: "10")
         timerLabelNode.position = CGPoint(x: 10, y: -9)
-        timerLabelNode.zPosition = 4
+        timerLabelNode.zPosition = 3
         
         timeBar.addChild(timerLabelNode)
         addChild(background)
