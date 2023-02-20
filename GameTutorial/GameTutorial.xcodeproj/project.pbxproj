@@ -17,6 +17,7 @@
 		B254EBEC299D48F0005B5FC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B254EBEA299D48F0005B5FC0 /* LaunchScreen.storyboard */; };
 		B268609D29A2AAF600303C69 /* LevelsScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B268609C29A2AAF600303C69 /* LevelsScene.sks */; };
 		B268609F29A2AB0D00303C69 /* LevelsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B268609E29A2AB0D00303C69 /* LevelsScene.swift */; };
+		B2AEA32729A3C2DF00A8118F /* song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B2AEA32629A3C2DF00A8118F /* song.mp3 */; };
 		B2B9DC1E29A00812005E6FC9 /* MenuGameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B2B9DC1D29A00812005E6FC9 /* MenuGameScene.sks */; };
 		B2B9DC2229A0094F005E6FC9 /* MenuGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B9DC2129A0094F005E6FC9 /* MenuGameScene.swift */; };
 /* End PBXBuildFile section */
@@ -33,6 +34,7 @@
 		B254EBEB299D48F0005B5FC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B268609C29A2AAF600303C69 /* LevelsScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = LevelsScene.sks; sourceTree = "<group>"; };
 		B268609E29A2AB0D00303C69 /* LevelsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsScene.swift; sourceTree = "<group>"; };
+		B2AEA32629A3C2DF00A8118F /* song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = song.mp3; path = ../../../../../Downloads/song.mp3; sourceTree = "<group>"; };
 		B2B9DC1D29A00812005E6FC9 /* MenuGameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MenuGameScene.sks; sourceTree = "<group>"; };
 		B2B9DC2129A0094F005E6FC9 /* MenuGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuGameScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,6 +102,7 @@
 			children = (
 				B254EBEA299D48F0005B5FC0 /* LaunchScreen.storyboard */,
 				B254EBE8299D48F0005B5FC0 /* Assets.xcassets */,
+				B2AEA32629A3C2DF00A8118F /* song.mp3 */,
 				B254EBE5299D48EE005B5FC0 /* Main.storyboard */,
 				B254EBDF299D48EE005B5FC0 /* Actions.sks */,
 				B254EBDB299D48EE005B5FC0 /* AppDelegate.swift */,
@@ -170,6 +173,7 @@
 				B254EBE9299D48F0005B5FC0 /* Assets.xcassets in Resources */,
 				B2B9DC1E29A00812005E6FC9 /* MenuGameScene.sks in Resources */,
 				B268609D29A2AAF600303C69 /* LevelsScene.sks in Resources */,
+				B2AEA32729A3C2DF00A8118F /* song.mp3 in Resources */,
 				B254EBEC299D48F0005B5FC0 /* LaunchScreen.storyboard in Resources */,
 				B254EBE0299D48EE005B5FC0 /* Actions.sks in Resources */,
 			);
