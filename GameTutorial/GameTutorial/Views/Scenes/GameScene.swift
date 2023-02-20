@@ -17,17 +17,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var gameOverLabel: SKLabelNode!
     var time = 10
     var background = SKSpriteNode(imageNamed: "bgImage")
+    var timeBar: SKSpriteNode!
     
     
     
     override func didMove(to view: SKView) {
         
         let bounds = UIScreen.main.bounds
-        print(self.size)
         background.size = CGSize(width: bounds.size.width, height: bounds.size.height)
         background.zPosition = -4
         background.position = CGPoint(x: 0, y: 0)
         print(background.size)
+        
+        timeBar = self.childNode(withName: timeBar)
+        
         addChild(background)
         
         timerLabelNode = (self.childNode(withName: "labelNode") as! SKLabelNode)
