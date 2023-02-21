@@ -10,6 +10,7 @@ import GameplayKit
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
+    private var score = 3
     var dictSprite = [String: CGPoint]()
     var sprite: SKNode!
     var timer: Timer!
@@ -170,6 +171,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(nodeShow)
         gridX.alpha = 0
         gridY.alpha = 0
+        UserDefaults.standard.set(score, forKey: scoreGame)
         DispatchQueue.main.asyncAfter(deadline: .now() + 3){
             if let view = self.view {
                 if let scene = SKScene(fileNamed: "LevelsScene") {
@@ -182,4 +184,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
     }
+    
+    
+    //MARK: - Private Key
+    private let scoreGame = "scoreGame"
 }

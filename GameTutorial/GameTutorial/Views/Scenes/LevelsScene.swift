@@ -11,11 +11,11 @@ import GameplayKit
 
 class LevelsScene: SKScene{
     
-    static var score = 0
     var boardCamera = SKCameraNode()
     var background = SKSpriteNode(imageNamed: "bgImage")
     var scrolView: SKSpriteNode!
     var buttonBackNode = SKSpriteNode(imageNamed: "backPage")
+   // var starNode: SKSpriteNode!
     
     override func didMove(to view: SKView) {
         let bounds = UIScreen.main.bounds
@@ -38,6 +38,15 @@ class LevelsScene: SKScene{
         addChild(buttonBackNode)
         boardCamera.addChild(scrolView)
         
+        if let star = boardCamera.childNode(withName: "star1") as? SKSpriteNode{
+            let score = UserDefaults.standard.integer(forKey: scoreGame)
+            print(score)
+            if score == 3 {
+                star.texture = SKTexture(imageNamed: "starWin")
+            }
+        }
+        
+      
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -74,4 +83,7 @@ class LevelsScene: SKScene{
             view.ignoresSiblingOrder = true
         }
     }
+    
+    //MARK: - Private Key
+    private let scoreGame = "scoreGame"
 }
