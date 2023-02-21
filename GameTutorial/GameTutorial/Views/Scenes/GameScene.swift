@@ -22,11 +22,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var spriteSwipe: SKSpriteNode!
     var nodeShow = SKSpriteNode(imageNamed: "7")
     var gameOverNode: SKSpriteNode!
-    var grid: SKShapeNode!
+    var gridX: SKShapeNode!
+    var gridY: SKShapeNode!
     
     override func didMove(to view: SKView) {
         
-        grid = (self.childNode(withName: "grid") as! SKShapeNode)
+        gridX = (self.childNode(withName: "grid") as! SKShapeNode)
+        gridY = (self.childNode(withName: "grid1") as! SKShapeNode)
         nodeShow.physicsBody?.isDynamic = true
         nodeShow.zPosition = 1
         nodeShow.run(SKAction.fadeIn(withDuration: 0.5))
@@ -54,9 +56,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         timeBar.addChild(timerLabelNode)
         addChild(background)
-        
-        
-       // gameOverLabel.alpha = 0
         
         let swipeRight: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipeRight))
         let swipeLeft: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipeLeft))
@@ -148,7 +147,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) { [self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) { [self] in
             var item = 0
             for (key, value) in self.dictSprite {
                 if let spriteSwipe = self.childNode(withName: key) as? SKSpriteNode {
@@ -169,8 +168,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         print("win")
         timer.invalidate()
         self.addChild(nodeShow)
-        grid.alpha = 0
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1){
+        gridX.alpha = 0
+        gridY.alpha = 0
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3){
             if let view = self.view {
                 if let scene = SKScene(fileNamed: "LevelsScene") {
                     let bounds = UIScreen.main.bounds
@@ -181,10 +181,5 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 view.ignoresSiblingOrder = true
             }
         }
-    }
-    
-    
-    override func update(_ currentTime: TimeInterval) {
-        // Called before each frame is rendered
     }
 }
