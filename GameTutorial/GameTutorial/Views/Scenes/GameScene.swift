@@ -15,13 +15,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var timer: Timer!
     var timerLabelNode: SKLabelNode!
     var gameOverLabel: SKLabelNode!
-    var time = 200
+    var time = 10
     var background = SKSpriteNode(imageNamed: "bgImage")
     var timeBar: SKSpriteNode!
     var lvlBar: SKSpriteNode!
     var spriteSwipe: SKSpriteNode!
+    var nodeShow: SKSpriteNode!
+    var gameOverNode: SKSpriteNode!
     
     override func didMove(to view: SKView) {
+        
+        nodeShow = (self.childNode(withName: "sprite7") as! SKSpriteNode)
+        nodeShow.alpha = 0
+        gameOverNode = (self.childNode(withName: "lose") as! SKSpriteNode)
         
         let bounds = UIScreen.main.bounds
         background.size = CGSize(width: bounds.size.width, height: bounds.size.height)
@@ -43,7 +49,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addChild(background)
         
         
-        //gameOverLabel.alpha = 0
+       // gameOverLabel.alpha = 0
         
         let swipeRight: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipeRight))
         let swipeLeft: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipeLeft))
@@ -100,18 +106,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func stopGame() {
-       // gameOverLabel.run(SKAction.fadeIn(withDuration: 0.5))
-        
-        if let view = self.view {
-            if let scene = SKScene(fileNamed: "MenuGameScene") {
-                let bounds = UIScreen.main.bounds
-                scene.size = CGSize(width: bounds.size.width, height: bounds.size.height)
-                scene.scaleMode = .aspectFill
+        gameOverNode.run(SKAction.fadeIn(withDuration: 0.5))
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3){
+            if let view = self.view {
+                if let scene = SKScene(fileNamed: "MenuGameScene") {
+                    let bounds = UIScreen.main.bounds
+                    scene.size = CGSize(width: bounds.size.width, height: bounds.size.height)
+                    scene.scaleMode = .aspectFill
 
-                view.presentScene(scene, transition: .moveIn(with: .down, duration: 1))
+                    view.presentScene(scene, transition: .moveIn(with: .down, duration: 1))
+                }
+                view.ignoresSiblingOrder = true
             }
-
-            view.ignoresSiblingOrder = true
         }
     }
     
@@ -130,34 +136,43 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-    
-    
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
-    }
-    
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.sprite = nil
     }
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+       
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) { [self] in
             var item = 0
             for (key, value) in self.dictSprite {
                 if let spriteSwipe = self.childNode(withName: key) as? SKSpriteNode {
-                    var rageX = Int(value.x) - Int(round(spriteSwipe.position.x*10)/10)
-                    var rageY = Int(value.y) - Int(round(spriteSwipe.position.y*10)/10)
+                    spriteSwipe.physicsBody?.pinned = true
+                    let rageX = Int(value.x) - Int(round(spriteSwipe.position.x*10)/10)
+                    let rageY = Int(value.y) - Int(round(spriteSwipe.position.y*10)/10)
                     if rageX >= -2 && rageX <= 2 && rageY >= -2 && rageY <= 2 {
                         item += 1
                     }
                 }
             }
-            item == 14 ? print("победа") : print("fff")
-            guard self.sprite != nil else { return }
-            self.sprite.physicsBody?.pinned = true
+            item == 14 ? winningGame() : print("fff")
         }
         
+    }
+    
+    func winningGame(){
+        print("win")
+        timer.invalidate()
+        //timer = nil
+        nodeShow.physicsBody?.isDynamic = true
+        nodeShow.zPosition = 1
+        nodeShow.run(SKAction.fadeIn(withDuration: 0.5))
+        for (key, _) in self.dictSprite {
+            if let spriteSwipe = self.childNode(withName: key) as? SKSpriteNode {
+                spriteSwipe.physicsBody?.pinned = true
+            }
+        }
+        var grid = (self.childNode(withName: "grid") as! SKSpriteNode)
+        grid.alpha = 0
     }
     
     

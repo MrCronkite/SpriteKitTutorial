@@ -53,7 +53,6 @@ class LevelsScene: SKScene{
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {
-            print(touch)
             let location = touch.location(in: self)
             let previousLocation = touch.previousLocation(in: self)
             let deltaY = location.y - previousLocation.y
@@ -71,7 +70,6 @@ class LevelsScene: SKScene{
 
                 view.presentScene(scene, transition: .moveIn(with: .down, duration: 1))
             }
-
             view.ignoresSiblingOrder = true
         }
     }
