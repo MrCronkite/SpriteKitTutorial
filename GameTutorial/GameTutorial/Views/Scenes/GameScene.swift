@@ -20,13 +20,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var timeBar: SKSpriteNode!
     var lvlBar: SKSpriteNode!
     var spriteSwipe: SKSpriteNode!
-    var nodeShow: SKSpriteNode!
+    var nodeShow = SKSpriteNode(imageNamed: "7")
     var gameOverNode: SKSpriteNode!
+    var grid: SKShapeNode!
     
     override func didMove(to view: SKView) {
         
-        nodeShow = (self.childNode(withName: "sprite7") as! SKSpriteNode)
+        grid = (self.childNode(withName: "grid") as! SKShapeNode)
+        nodeShow.physicsBody?.isDynamic = true
+        nodeShow.zPosition = 1
+        nodeShow.run(SKAction.fadeIn(withDuration: 0.5))
+        nodeShow.size = CGSize(width: 130, height: 101)
+        nodeShow.position = CGPoint(x:-130, y: -0)
         nodeShow.alpha = 0
+        
         gameOverNode = (self.childNode(withName: "lose") as! SKSpriteNode)
         
         let bounds = UIScreen.main.bounds
@@ -123,7 +130,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        dictSprite = ["sprite1": CGPoint(x: -260, y: 101), "sprite2": CGPoint(x: -130, y: 101), "sprite3": CGPoint(x:-0 , y: 101), "sprite4": CGPoint(x: 130, y: 101), "sprite5": CGPoint(x: 260, y: 101), "sprite6": CGPoint(x: -260, y: 0), "sprite7": CGPoint(x: 130, y: 0), "sprite8": CGPoint(x: 0, y: 0), "sprite9": CGPoint(x: 130, y: 0), "sprite10": CGPoint(x: 260, y: 0), "sprite11": CGPoint(x: -260, y: -101), "sprite12": CGPoint(x: -130, y: -101), "sprite13": CGPoint(x: 0, y: -101), "sprite14": CGPoint(x: 130, y: -101), "sprite15": CGPoint(x: 260, y: -101)]
+        dictSprite = ["sprite1": CGPoint(x: -260, y: 101), "sprite2": CGPoint(x: -130, y: 101), "sprite3": CGPoint(x:-0 , y: 101), "sprite4": CGPoint(x: 130, y: 101), "sprite5": CGPoint(x: 260, y: 101), "sprite6": CGPoint(x: -260, y: 0), "sprite7": CGPoint(x: -130, y: -0), "sprite8": CGPoint(x: 0, y: 0), "sprite9": CGPoint(x: 130, y: 0), "sprite10": CGPoint(x: 260, y: 0), "sprite11": CGPoint(x: -260, y: -101), "sprite12": CGPoint(x: -130, y: -101), "sprite13": CGPoint(x: 0, y: -101), "sprite14": CGPoint(x: 130, y: -101), "sprite15": CGPoint(x: 260, y: -101)]
         if let touch = touches.first {
             let location = touch.location(in: self)
             let touchedNodes = self.nodes(at: location)
@@ -141,12 +148,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-       
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) { [self] in
             var item = 0
             for (key, value) in self.dictSprite {
                 if let spriteSwipe = self.childNode(withName: key) as? SKSpriteNode {
-                    spriteSwipe.physicsBody?.pinned = true
                     let rageX = Int(value.x) - Int(round(spriteSwipe.position.x*10)/10)
                     let rageY = Int(value.y) - Int(round(spriteSwipe.position.y*10)/10)
                     if rageX >= -2 && rageX <= 2 && rageY >= -2 && rageY <= 2 {
@@ -155,24 +160,27 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 }
             }
             item == 14 ? winningGame() : print("fff")
+            guard sprite != nil else { return }
+            sprite.physicsBody?.pinned = true
         }
-        
     }
     
     func winningGame(){
         print("win")
         timer.invalidate()
-        //timer = nil
-        nodeShow.physicsBody?.isDynamic = true
-        nodeShow.zPosition = 1
-        nodeShow.run(SKAction.fadeIn(withDuration: 0.5))
-        for (key, _) in self.dictSprite {
-            if let spriteSwipe = self.childNode(withName: key) as? SKSpriteNode {
-                spriteSwipe.physicsBody?.pinned = true
+        self.addChild(nodeShow)
+        grid.alpha = 0
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1){
+            if let view = self.view {
+                if let scene = SKScene(fileNamed: "LevelsScene") {
+                    let bounds = UIScreen.main.bounds
+                    scene.size = CGSize(width: bounds.size.width, height: bounds.size.height)
+                    scene.scaleMode = .aspectFill
+                    view.presentScene(scene, transition: .moveIn(with: .down, duration: 1))
+                }
+                view.ignoresSiblingOrder = true
             }
         }
-        var grid = (self.childNode(withName: "grid") as! SKSpriteNode)
-        grid.alpha = 0
     }
     
     

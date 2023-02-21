@@ -11,6 +11,7 @@ import GameplayKit
 
 class LevelsScene: SKScene{
     
+    static var score = 0
     var boardCamera = SKCameraNode()
     var background = SKSpriteNode(imageNamed: "bgImage")
     var scrolView: SKSpriteNode!
@@ -24,7 +25,7 @@ class LevelsScene: SKScene{
         scrolView.position = CGPoint(x: 0, y:  -(bounds.size.height / 2))
         
         boardCamera = self.childNode(withName: "boardCamera") as! SKCameraNode
-        buttonBackNode.position = CGPoint(x: -(bounds.size.height - 30), y: (bounds.size.height - 250))
+        buttonBackNode.position = CGPoint(x: -(bounds.size.width/2-50), y: (bounds.size.height/2-50))
         buttonBackNode.size = CGSize(width: 30, height: 30)
         buttonBackNode.name = "back"
         buttonBackNode.zPosition = 2

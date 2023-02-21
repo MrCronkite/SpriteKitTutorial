@@ -36,10 +36,10 @@ class MenuGameScene: SKScene {
         buttonPlay.position = CGPoint(x: 0, y: -20)
         buttonPlay.name = "buttonPlay"
         buttonSong.position = CGPoint(x: (bounds.size.width/2-50), y: (bounds.size.height/2-50))
-        buttonSong.size = CGSize(width: 40, height: 40)
+        buttonSong.size = CGSize(width: 30, height: 30)
         buttonSong.name = "song"
         buttonList.position = CGPoint(x: -(bounds.size.width/2-50), y: (bounds.size.height/2-50))
-        buttonList.size = CGSize(width: 40, height: 40)
+        buttonList.size = CGSize(width: 30, height: 30)
         buttonList.name = "list"
         
         addChild(buttonList)
