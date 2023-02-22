@@ -8,12 +8,17 @@
 import UIKit
 import SpriteKit
 import GameplayKit
+import FBSDKCoreKit
+import FBSDKCoreKit_Basics
+import FBAEMKit
 
 class GameViewController: UIViewController {
-
+    
+    let appsflyerKey = "KdeD7D78mvpiqkaqFLATn7"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //AppEvents.logEvent()
         if let view = self.view as! SKView? {
             if let scene = SKScene(fileNamed: "MenuGameScene") {
                 scene.scaleMode = .aspectFill

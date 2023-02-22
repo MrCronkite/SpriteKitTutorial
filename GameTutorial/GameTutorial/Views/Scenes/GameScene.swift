@@ -83,7 +83,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         if time <= 0 {
             timer.invalidate()
-            timer = nil
             stopGame()
         }
     }
