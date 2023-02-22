@@ -9,8 +9,6 @@ import UIKit
 import SpriteKit
 import GameplayKit
 import FBSDKCoreKit
-import FBSDKCoreKit_Basics
-import FBAEMKit
 
 class GameViewController: UIViewController {
     
@@ -18,7 +16,14 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //AppEvents.logEvent()
+        if AccessToken.current != nil {
+            GraphRequest(graphPath: "me").start { connection, result, error in
+                if let result = result {
+                    print("Fetched Result: \(result)")
+                }
+            }
+        }
+        
         if let view = self.view as! SKView? {
             if let scene = SKScene(fileNamed: "MenuGameScene") {
                 scene.scaleMode = .aspectFill
@@ -28,7 +33,7 @@ class GameViewController: UIViewController {
                 view.presentScene(scene)
             }
             
-            view.ignoresSiblingOrder = true
+            //view.ignoresSiblingOrder = true
         }
     }
 

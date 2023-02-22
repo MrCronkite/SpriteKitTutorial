@@ -19,7 +19,6 @@ class MenuGameScene: SKScene {
     var buttonList = SKSpriteNode(imageNamed: "listBtn")
     var player = AVAudioPlayer()
     
-    
     override func didMove(to view: SKView) {
         
         let bounds = UIScreen.main.bounds
@@ -96,18 +95,23 @@ class MenuGameScene: SKScene {
         let scale = SKAction.scale(to: 0.9, duration: 0.1)
         let sequence = SKAction.sequence([scale])
         buttonPlay.run(sequence)
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2){
-            if let view = self.view {
-                if let scene = SKScene(fileNamed: "GameScene") {
-                    let bounds = UIScreen.main.bounds
-                    scene.size = CGSize(width: bounds.size.width, height: bounds.size.height)
-                    scene.scaleMode = .aspectFill
-                    
-                    view.presentScene(scene, transition: .moveIn(with: .right, duration: 1))
+        let arreyKey = [scoreGame2, scoreGame]
+        for key in arreyKey {
+            let score = UserDefaults.standard.integer(forKey: key)
+            if score == 0 {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2){
+                    if let view = self.view {
+                        if let scene = SKScene(fileNamed: key) {
+                            let bounds = UIScreen.main.bounds
+                            scene.size = CGSize(width: bounds.size.width, height: bounds.size.height)
+                            scene.scaleMode = .aspectFill
+                            
+                            view.presentScene(scene, transition: .moveIn(with: .right, duration: 1))
+                        }
+                        
+                        view.ignoresSiblingOrder = true
+                    }
                 }
-                
-                view.ignoresSiblingOrder = true
             }
         }
     }
@@ -126,5 +130,8 @@ class MenuGameScene: SKScene {
         }
     }
     
+    //MARK: - Private Key
+    private let scoreGame = "GameScene"
+    private let scoreGame2 = "Lvl2Scene"
     
 }

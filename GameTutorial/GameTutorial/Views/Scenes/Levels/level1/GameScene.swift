@@ -16,7 +16,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var timer: Timer!
     var timerLabelNode: SKLabelNode!
     var gameOverLabel: SKLabelNode!
-    var time = 10
+    var time = 100
     var background = SKSpriteNode(imageNamed: "bgImage")
     var timeBar: SKSpriteNode!
     var lvlBar: SKSpriteNode!
@@ -89,25 +89,25 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     @objc func swipeDown(sender: UISwipeGestureRecognizer) {
         guard sprite != nil else { return }
-        let moveSprite = SKAction.move(by: CGVector(dx: 0, dy: -101), duration: 0.1)
+        let moveSprite = SKAction.move(by: CGVector(dx: 0, dy: -101), duration: 0.3)
         sprite.run(moveSprite)
     }
     
     @objc func swipeUp(sender: UISwipeGestureRecognizer) {
         guard sprite != nil else { return }
-        let moveSprite = SKAction.move(by: CGVector(dx: 0, dy: 101), duration: 0.1)
+        let moveSprite = SKAction.move(by: CGVector(dx: 0, dy: 101), duration: 0.3)
         sprite.run(moveSprite)
     }
 
     @objc func swipeRight(sender: UISwipeGestureRecognizer) {
         guard sprite != nil else { return }
-        let moveSprite = SKAction.move(by: CGVector(dx: 130, dy: 0), duration: 0.1)
+        let moveSprite = SKAction.move(by: CGVector(dx: 130, dy: 0), duration: 0.3)
         sprite.run(moveSprite)
     }
     
     @objc func swipeLeft(sender: UISwipeGestureRecognizer) {
         guard sprite != nil else { return }
-        let moveSprite = SKAction.move(by: CGVector(dx: -130, dy: 0), duration: 0.1)
+        let moveSprite = SKAction.move(by: CGVector(dx: -130, dy: 0), duration: 0.3)
         sprite.run(moveSprite)
     }
     
@@ -147,7 +147,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) { [self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.55) { [self] in
             var item = 0
             for (key, value) in self.dictSprite {
                 if let spriteSwipe = self.childNode(withName: key) as? SKSpriteNode {
@@ -186,5 +186,5 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
     //MARK: - Private Key
-    private let scoreGame = "scoreGame"
+    private let scoreGame = "GameScene"
 }

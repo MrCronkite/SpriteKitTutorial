@@ -40,7 +40,6 @@ class LevelsScene: SKScene{
         
         if let star = boardCamera.childNode(withName: "star1") as? SKSpriteNode{
             let score = UserDefaults.standard.integer(forKey: scoreGame)
-            print(score)
             if score == 3 {
                 star.texture = SKTexture(imageNamed: "starWin")
             }
@@ -85,5 +84,6 @@ class LevelsScene: SKScene{
     }
     
     //MARK: - Private Key
-    private let scoreGame = "scoreGame"
+    private let scoreGame = "GameScene"
+    private let scoreGame2 = "Lvl2Scene"
 }
