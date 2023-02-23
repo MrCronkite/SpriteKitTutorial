@@ -158,14 +158,13 @@ class Lvl2Scene: SKScene, SKPhysicsContactDelegate {
                     }
                 }
             }
-            item == 14 ? winningGame() : print("fff")
+            item == 14 ? winningGame() : print("а")
             guard sprite != nil else { return }
             sprite.physicsBody?.pinned = true
         }
     }
     
     func winningGame(){
-        print("win")
         timer.invalidate()
         self.addChild(nodeShow)
         gridX.alpha = 0
