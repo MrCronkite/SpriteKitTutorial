@@ -1,4 +1,7 @@
 PODS:
+  - AppsFlyerFramework (6.10.0):
+    - AppsFlyerFramework/Main (= 6.10.0)
+  - AppsFlyerFramework/Main (6.10.0)
   - FBAEMKit (16.0.0):
     - FBSDKCoreKit_Basics (= 16.0.0)
   - FBSDKCoreKit (16.0.0):
@@ -7,19 +10,22 @@ PODS:
   - FBSDKCoreKit_Basics (16.0.0)
 
 DEPENDENCIES:
+  - AppsFlyerFramework
   - FBSDKCoreKit
 
 SPEC REPOS:
   trunk:
+    - AppsFlyerFramework
     - FBAEMKit
     - FBSDKCoreKit
     - FBSDKCoreKit_Basics
 
 SPEC CHECKSUMS:
+  AppsFlyerFramework: dc8599db42e1669388287d47a1f0e6b8aa35639e
   FBAEMKit: 7fb5a0b5caf2ed2900e29c3a17de92ea7193a247
   FBSDKCoreKit: 2a77418391aaa5da38ebf57b90b6de42cebcce6a
   FBSDKCoreKit_Basics: 65c5b3146f38705b95338b54f68ea086bcc468dd
 
-PODFILE CHECKSUM: c80e2db7e70a657cc363d9924f7798a240dae612
+PODFILE CHECKSUM: d7c152f84462ab957353024f2dfb838201c1b460
 
 COCOAPODS: 1.11.3

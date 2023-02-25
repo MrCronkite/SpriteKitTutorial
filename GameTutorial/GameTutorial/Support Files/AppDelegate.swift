@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AppsFlyerLib
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,7 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        AppsFlyerLib.shared().delegate = self
+        
         return true
     }
 
@@ -43,3 +46,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+
+extension AppDelegate: AppsFlyerLibDelegate {
+    func onConversionDataFail(_ error: Error) {
+        <#code#>
+    }
+    
+     // Метод вызывается при переходе по ссылке, если приложение не было ранее установлено и пользователь попал в него после установки из AppStore
+    func onConversionDataSuccess(_ conversionInfo: [AnyHashable : Any]) {
+    // Проверяем, что ссылка была впервые открыта, используется, чтобы не было ложных срабатываний при последующих запусках приложения
+        guard let is_first_launch = conversionInfo["is_first_launch"] as? Bool, is_first_launch else { return }
+    // Извлекаем из словаря conversionInfo указанные при создании ссылки параметры и передаем их в обработчик
+    }
+   // Метод вызывается при переходе по ссылке если приложение установлено
+    func onAppOpenAttribution(_ attributionData: [AnyHashable: Any]) {
+   // Извлекаем из словаря attributionData указанные при создании ссылки параметры и передаем их в обработчик
+    }
+}

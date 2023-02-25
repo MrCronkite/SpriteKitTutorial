@@ -6,5 +6,6 @@ target 'GameTutorial' do
   use_frameworks!
 
   pod 'FBSDKCoreKit'
+  pod 'AppsFlyerFramework'
 
 end

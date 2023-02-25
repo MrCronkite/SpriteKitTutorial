@@ -1,6 +1,10 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
+## AppsFlyerFramework
+
+Copyright 2018 AppsFlyer Ltd. All rights reserved.
+
 ## FBAEMKit
 
 Copyright (c) Meta Platforms, Inc. and affiliates. All rights reserved.

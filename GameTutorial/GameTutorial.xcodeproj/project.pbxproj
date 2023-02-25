@@ -41,6 +41,7 @@
 		B254EBEB299D48F0005B5FC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B25C898629A6A141003F4036 /* Lvl2Scene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Lvl2Scene.sks; sourceTree = "<group>"; };
 		B260AA8C29A926ED00A0E58B /* VpnChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VpnChecker.swift; sourceTree = "<group>"; };
+		B260AA8F29A936A200A0E58B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B268609C29A2AAF600303C69 /* LevelsScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = LevelsScene.sks; sourceTree = "<group>"; };
 		B268609E29A2AB0D00303C69 /* LevelsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsScene.swift; sourceTree = "<group>"; };
 		B2AEA32629A3C2DF00A8118F /* song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = song.mp3; path = ../../../../../Downloads/song.mp3; sourceTree = "<group>"; };
@@ -91,6 +92,7 @@
 		B254EBDA299D48EE005B5FC0 /* GameTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				B260AA8F29A936A200A0E58B /* Info.plist */,
 				B260AA8B29A9268600A0E58B /* Managers */,
 				B2B9DC1A29A006DC005E6FC9 /* Support Files */,
 				B268609B29A2AA8800303C69 /* Views */,
@@ -448,10 +450,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GameTutorial/GameTutorial.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LUQ926BAHR;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GameTutorial/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -465,6 +470,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = vladShima.GameTutorial;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -477,10 +483,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GameTutorial/GameTutorial.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LUQ926BAHR;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GameTutorial/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -494,6 +503,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = vladShima.GameTutorial;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

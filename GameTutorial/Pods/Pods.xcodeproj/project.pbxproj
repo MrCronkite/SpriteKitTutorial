@@ -14,8 +14,8 @@
 				C05801FB1115AB56CF9E73BB6786A73A /* [CP] Copy XCFrameworks */,
 			);
 			dependencies = (
-				29EFE805C41C725464AA7E1873F0E436 /* PBXTargetDependency */,
-				E442A77547DD43735875DBC2B6D23656 /* PBXTargetDependency */,
+				E8B93953CF91AC13B91565A6548D0DE3 /* PBXTargetDependency */,
+				06A0F8F3D8FD3B34AC115CA42B0E09E9 /* PBXTargetDependency */,
 			);
 			name = FBSDKCoreKit;
 		};
@@ -26,129 +26,183 @@
 				A261CEA870C48433C3575F1CCC2BB166 /* [CP] Copy XCFrameworks */,
 			);
 			dependencies = (
-				30B1ADACED79735EA7F0039C44B55578 /* PBXTargetDependency */,
+				DD1FEA2107F32CC88EF6430C688067D2 /* PBXTargetDependency */,
 			);
 			name = FBAEMKit;
 		};
 		8EA62FEAB23070050EFD4D4508D659E5 /* FBSDKCoreKit_Basics */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = E714E0206C9DA698AE792CA6C027BB4B /* Build configuration list for PBXAggregateTarget "FBSDKCoreKit_Basics" */;
+			buildConfigurationList = F8EF219BAE36F584E0BB5C68C46C42E4 /* Build configuration list for PBXAggregateTarget "FBSDKCoreKit_Basics" */;
 			buildPhases = (
-				644A7797C26C8C294D5DD8B7956FDF42 /* [CP] Copy XCFrameworks */,
+				7BDF496630B0A561B9C8ED29D667271F /* [CP] Copy XCFrameworks */,
 			);
 			dependencies = (
 			);
 			name = FBSDKCoreKit_Basics;
 		};
+		B0B23938B1EBCBAD2419AB6E9D222A0B /* AppsFlyerFramework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 0D1FA58CB835029E5EFDFE335BBB275D /* Build configuration list for PBXAggregateTarget "AppsFlyerFramework" */;
+			buildPhases = (
+				3848528C72BC011A1D8E8829E8F3E9B0 /* [CP] Copy XCFrameworks */,
+			);
+			dependencies = (
+			);
+			name = AppsFlyerFramework;
+		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		A7B7A41A521528CE1609C894E98D3B33 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		EFC553A902B7AA356DF09458CF40972A /* Pods-GameTutorial-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 059D93BFA5A710CA0AF737CBC6E42A49 /* Pods-GameTutorial-dummy.m */; };
-		F176C4BF2236B0C0E113FA066CC3C1B1 /* Pods-GameTutorial-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EF1888CB81438F48DC79EABE5D376A /* Pods-GameTutorial-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6A1A96728481057DFE9F335EA28E5FC1 /* Pods-GameTutorial-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EF1888CB81438F48DC79EABE5D376A /* Pods-GameTutorial-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F9721F59FB172F157BBD347352714B58 /* Pods-GameTutorial-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 059D93BFA5A710CA0AF737CBC6E42A49 /* Pods-GameTutorial-dummy.m */; };
+		FCA385B956CF421D5F381080C07B3E91 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		12200CC80562AC4F8EDBB833B656B77E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8EA62FEAB23070050EFD4D4508D659E5;
-			remoteInfo = FBSDKCoreKit_Basics;
-		};
-		28C4F4553CA02095C75049AF9C803D0D /* PBXContainerItemProxy */ = {
+		12D11C8D36D67AE46CEBAD88179E67B7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 479BDBD165CD08E2159181E58CD2078F;
 			remoteInfo = FBAEMKit;
 		};
-		4DDD5A9D57B996159C63330AAEE39794 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 479BDBD165CD08E2159181E58CD2078F;
-			remoteInfo = FBAEMKit;
-		};
-		5A47EBFC5B1B4B811812D0A8430C5468 /* PBXContainerItemProxy */ = {
+		4A53AAFEE5BF9727FBC63A3D47FF99C4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 8EA62FEAB23070050EFD4D4508D659E5;
 			remoteInfo = FBSDKCoreKit_Basics;
 		};
-		95586219A7A6339F137F1ABB455D5C4F /* PBXContainerItemProxy */ = {
+		5C86EF64D043F8E0CB957E45CF3D6A87 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8EA62FEAB23070050EFD4D4508D659E5;
+			remoteInfo = FBSDKCoreKit_Basics;
+		};
+		B1D494B4BF55A9FAC7A107C661A717E5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 28907903AF6DD0AD321D92CD660E7E23;
 			remoteInfo = FBSDKCoreKit;
 		};
-		C273BD6993C506605FE5A5B9282178B4 /* PBXContainerItemProxy */ = {
+		D1D16FA100CAEEC442B5762D0E918E5B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 8EA62FEAB23070050EFD4D4508D659E5;
 			remoteInfo = FBSDKCoreKit_Basics;
 		};
+		DD08F0C45F9D34F57AB1AC6BDFA3105D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B0B23938B1EBCBAD2419AB6E9D222A0B;
+			remoteInfo = AppsFlyerFramework;
+		};
+		F733273E4A06271CDA9E05829B061948 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 479BDBD165CD08E2159181E58CD2078F;
+			remoteInfo = FBAEMKit;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		059D93BFA5A710CA0AF737CBC6E42A49 /* Pods-GameTutorial-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GameTutorial-dummy.m"; sourceTree = "<group>"; };
-		09D230F399B9CDC5ACDFD63F8642629E /* FBSDKCoreKit_Basics.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = FBSDKCoreKit_Basics.xcframework; path = XCFrameworks/FBSDKCoreKit_Basics.xcframework; sourceTree = "<group>"; };
+		0A9192967DBA6E9D75389476FC36E579 /* FBSDKCoreKit_Basics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSDKCoreKit_Basics.release.xcconfig; sourceTree = "<group>"; };
 		0FF098C97D33DE53150B0F2B298972AD /* Pods-GameTutorial.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GameTutorial.modulemap"; sourceTree = "<group>"; };
+		32E282B624CDF74E887AF56DDA12CD83 /* FBSDKCoreKit.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = FBSDKCoreKit.xcframework; path = XCFrameworks/FBSDKCoreKit.xcframework; sourceTree = "<group>"; };
 		368F0AE073D30B7D51BB45078CCBBF30 /* Pods-GameTutorial-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GameTutorial-Info.plist"; sourceTree = "<group>"; };
+		3BC71D523370232AD2D5A5EC8AB8FE32 /* FBSDKCoreKit_Basics.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = FBSDKCoreKit_Basics.xcframework; path = XCFrameworks/FBSDKCoreKit_Basics.xcframework; sourceTree = "<group>"; };
+		429996FA602DCD5FB9CB88EEF9EA643C /* FBSDKCoreKit-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "FBSDKCoreKit-xcframeworks.sh"; sourceTree = "<group>"; };
+		458848AEDA3948392A7D8B6851CD9ABA /* FBAEMKit.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = FBAEMKit.xcframework; path = XCFrameworks/FBAEMKit.xcframework; sourceTree = "<group>"; };
+		4620927D563B4A2D546876A8F6EFF17E /* AppsFlyerFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AppsFlyerFramework.release.xcconfig; sourceTree = "<group>"; };
 		46EF1888CB81438F48DC79EABE5D376A /* Pods-GameTutorial-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GameTutorial-umbrella.h"; sourceTree = "<group>"; };
 		4B427FC98074E75257591757537928EA /* Pods-GameTutorial-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GameTutorial-acknowledgements.plist"; sourceTree = "<group>"; };
+		5744F0CA7C0585767823DB922E3BDB69 /* FBSDKCoreKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSDKCoreKit.debug.xcconfig; sourceTree = "<group>"; };
+		57570CBAF44F4D5FEAD7DD5EC7501A78 /* FBAEMKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBAEMKit.debug.xcconfig; sourceTree = "<group>"; };
 		57B4AB00F7B33C14FFA70A384B855AC6 /* Pods-GameTutorial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GameTutorial.release.xcconfig"; sourceTree = "<group>"; };
-		656A51D4085FAF61C0F89DFE6DBA0C3D /* FBSDKCoreKit_Basics-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "FBSDKCoreKit_Basics-xcframeworks.sh"; sourceTree = "<group>"; };
-		67215E9DB51D21AA3070DBC53867177B /* FBAEMKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBAEMKit.release.xcconfig; sourceTree = "<group>"; };
-		682787CB46805B05FD5C7DE5AB608AC2 /* FBSDKCoreKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSDKCoreKit.release.xcconfig; sourceTree = "<group>"; };
+		650E732060346D9295B31898927F1837 /* AppsFlyerFramework-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "AppsFlyerFramework-xcframeworks.sh"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		77855C33BAD143457094261D1B227A96 /* Pods-GameTutorial */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-GameTutorial"; path = Pods_GameTutorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		950D318518D6D7A21495C1D11607DA2A /* FBAEMKit-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "FBAEMKit-xcframeworks.sh"; sourceTree = "<group>"; };
+		98A54503DEA9317DD1E9A788002DA07D /* FBSDKCoreKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSDKCoreKit.release.xcconfig; sourceTree = "<group>"; };
+		98F3FB2EC6D6D74AFC3FD154F071D835 /* AppsFlyerFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AppsFlyerFramework.debug.xcconfig; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9EE8E29D1D10C6D2DDBDE9A6544C541A /* FBSDKCoreKit_Basics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSDKCoreKit_Basics.debug.xcconfig; sourceTree = "<group>"; };
-		9F78A376AAECFCFE3796E0756E935AA3 /* FBSDKCoreKit.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = FBSDKCoreKit.xcframework; path = XCFrameworks/FBSDKCoreKit.xcframework; sourceTree = "<group>"; };
+		AA9D74495E6F894267AD93C75493302D /* FBSDKCoreKit_Basics-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "FBSDKCoreKit_Basics-xcframeworks.sh"; sourceTree = "<group>"; };
 		ADFD5418FF35754D303A9537E946FC26 /* Pods-GameTutorial-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GameTutorial-acknowledgements.markdown"; sourceTree = "<group>"; };
-		B4412E2C4158C364F87F5C657B439D30 /* FBAEMKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBAEMKit.debug.xcconfig; sourceTree = "<group>"; };
 		BF54936F2998CA5F44576D6530879CB5 /* Pods-GameTutorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GameTutorial.debug.xcconfig"; sourceTree = "<group>"; };
-		C5AB557B21ADC92D36C7E6895E29C69E /* FBSDKCoreKit-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "FBSDKCoreKit-xcframeworks.sh"; sourceTree = "<group>"; };
-		CD02CDF8FFF2A2908196ED48B846AF1F /* FBAEMKit-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "FBAEMKit-xcframeworks.sh"; sourceTree = "<group>"; };
-		DE385D2F1BE20B7670AC076A2E806FC2 /* FBSDKCoreKit_Basics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSDKCoreKit_Basics.release.xcconfig; sourceTree = "<group>"; };
-		DFFE2B7096BA397D99492EFE93938633 /* FBSDKCoreKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSDKCoreKit.debug.xcconfig; sourceTree = "<group>"; };
-		EA4565830E9615EF55E82EFCA36290D0 /* FBAEMKit.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = FBAEMKit.xcframework; path = XCFrameworks/FBAEMKit.xcframework; sourceTree = "<group>"; };
+		E844CF3FD8DEE469CBB46611F2B87AE8 /* AppsFlyerLib.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = AppsFlyerLib.xcframework; sourceTree = "<group>"; };
+		EAF2839F9C043D4D742955441B6888CD /* FBSDKCoreKit_Basics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSDKCoreKit_Basics.debug.xcconfig; sourceTree = "<group>"; };
 		EBE9CA360CFB998A2784D3B50B4D12EA /* Pods-GameTutorial-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GameTutorial-frameworks.sh"; sourceTree = "<group>"; };
+		F381F77DD407E06F438B25B6D11FEF43 /* FBAEMKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBAEMKit.release.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		953F8C98FF4FD6959C88ADE75C2618C3 /* Frameworks */ = {
+		0C85A9AEFE26BF7E22F9E12C17254AD9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7B7A41A521528CE1609C894E98D3B33 /* Foundation.framework in Frameworks */,
+				FCA385B956CF421D5F381080C07B3E91 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		245C73F58264CBC0A58E4BB8DA087A93 /* Support Files */ = {
+		08BA542E8F76F8833A73FA09868D0A78 /* FBSDKCoreKit */ = {
 			isa = PBXGroup;
 			children = (
-				656A51D4085FAF61C0F89DFE6DBA0C3D /* FBSDKCoreKit_Basics-xcframeworks.sh */,
-				9EE8E29D1D10C6D2DDBDE9A6544C541A /* FBSDKCoreKit_Basics.debug.xcconfig */,
-				DE385D2F1BE20B7670AC076A2E806FC2 /* FBSDKCoreKit_Basics.release.xcconfig */,
+				53E9DB3DA23390DE0CA5F3643A80A932 /* Frameworks */,
+				8EC0EFB22205A6BBCEEC3331ECAA69E4 /* Support Files */,
+			);
+			name = FBSDKCoreKit;
+			path = FBSDKCoreKit;
+			sourceTree = "<group>";
+		};
+		14CC81A2F04B1C0DF7670539A79B9C82 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2FB19101889C6C0B7EB5F2467847E617 /* AppsFlyerFramework */,
+				17A109695790C702189F65603C671C60 /* FBAEMKit */,
+				08BA542E8F76F8833A73FA09868D0A78 /* FBSDKCoreKit */,
+				6632D97371CC35DEB66203CB5525D3DC /* FBSDKCoreKit_Basics */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		17A109695790C702189F65603C671C60 /* FBAEMKit */ = {
+			isa = PBXGroup;
+			children = (
+				D76CC5BB3850B89C15C73B8F11A9FC2B /* Frameworks */,
+				A473EFE847D9B2464801CDEAE40D19C2 /* Support Files */,
+			);
+			name = FBAEMKit;
+			path = FBAEMKit;
+			sourceTree = "<group>";
+		};
+		2FB19101889C6C0B7EB5F2467847E617 /* AppsFlyerFramework */ = {
+			isa = PBXGroup;
+			children = (
+				B6FB66AA248546BAF13D1EE0A00B42B9 /* Main */,
+				45101B17191CF208BDC6CC527ABD87DF /* Support Files */,
+			);
+			name = AppsFlyerFramework;
+			path = AppsFlyerFramework;
+			sourceTree = "<group>";
+		};
+		3CF2FD4AA8A319704902E1143EF35910 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AA9D74495E6F894267AD93C75493302D /* FBSDKCoreKit_Basics-xcframeworks.sh */,
+				EAF2839F9C043D4D742955441B6888CD /* FBSDKCoreKit_Basics.debug.xcconfig */,
+				0A9192967DBA6E9D75389476FC36E579 /* FBSDKCoreKit_Basics.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/FBSDKCoreKit_Basics";
-			sourceTree = "<group>";
-		};
-		3BE8FF07AA11B0BF05185B560A88E030 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				9F78A376AAECFCFE3796E0756E935AA3 /* FBSDKCoreKit.xcframework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		3EC92D2875E7CEC05F0A94D0B10790C0 /* Products */ = {
@@ -159,10 +213,29 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4FA3A55E4461CC94FE3CFA5CB2F0D2E6 /* Frameworks */ = {
+		45101B17191CF208BDC6CC527ABD87DF /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				EA4565830E9615EF55E82EFCA36290D0 /* FBAEMKit.xcframework */,
+				650E732060346D9295B31898927F1837 /* AppsFlyerFramework-xcframeworks.sh */,
+				98F3FB2EC6D6D74AFC3FD154F071D835 /* AppsFlyerFramework.debug.xcconfig */,
+				4620927D563B4A2D546876A8F6EFF17E /* AppsFlyerFramework.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/AppsFlyerFramework";
+			sourceTree = "<group>";
+		};
+		4A85C057C3D645E9C1F6D4B0E0930CCA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E844CF3FD8DEE469CBB46611F2B87AE8 /* AppsFlyerLib.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		53E9DB3DA23390DE0CA5F3643A80A932 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				32E282B624CDF74E887AF56DDA12CD83 /* FBSDKCoreKit.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -175,53 +248,52 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		6F20AEDD2C6F0671C1F81F632FF47841 /* Support Files */ = {
+		6632D97371CC35DEB66203CB5525D3DC /* FBSDKCoreKit_Basics */ = {
 			isa = PBXGroup;
 			children = (
-				C5AB557B21ADC92D36C7E6895E29C69E /* FBSDKCoreKit-xcframeworks.sh */,
-				DFFE2B7096BA397D99492EFE93938633 /* FBSDKCoreKit.debug.xcconfig */,
-				682787CB46805B05FD5C7DE5AB608AC2 /* FBSDKCoreKit.release.xcconfig */,
+				8CD957AB4F4752BBF6464EA33833E684 /* Frameworks */,
+				3CF2FD4AA8A319704902E1143EF35910 /* Support Files */,
+			);
+			name = FBSDKCoreKit_Basics;
+			path = FBSDKCoreKit_Basics;
+			sourceTree = "<group>";
+		};
+		8CD957AB4F4752BBF6464EA33833E684 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3BC71D523370232AD2D5A5EC8AB8FE32 /* FBSDKCoreKit_Basics.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8EC0EFB22205A6BBCEEC3331ECAA69E4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				429996FA602DCD5FB9CB88EEF9EA643C /* FBSDKCoreKit-xcframeworks.sh */,
+				5744F0CA7C0585767823DB922E3BDB69 /* FBSDKCoreKit.debug.xcconfig */,
+				98A54503DEA9317DD1E9A788002DA07D /* FBSDKCoreKit.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/FBSDKCoreKit";
 			sourceTree = "<group>";
 		};
-		A782EF9D0BE5E42456DC70C2EB1E1801 /* Frameworks */ = {
+		A473EFE847D9B2464801CDEAE40D19C2 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				09D230F399B9CDC5ACDFD63F8642629E /* FBSDKCoreKit_Basics.xcframework */,
+				950D318518D6D7A21495C1D11607DA2A /* FBAEMKit-xcframeworks.sh */,
+				57570CBAF44F4D5FEAD7DD5EC7501A78 /* FBAEMKit.debug.xcconfig */,
+				F381F77DD407E06F438B25B6D11FEF43 /* FBAEMKit.release.xcconfig */,
 			);
-			name = Frameworks;
+			name = "Support Files";
+			path = "../Target Support Files/FBAEMKit";
 			sourceTree = "<group>";
 		};
-		AAB02F7D69D7E8C892912618322C911B /* FBAEMKit */ = {
+		B6FB66AA248546BAF13D1EE0A00B42B9 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				4FA3A55E4461CC94FE3CFA5CB2F0D2E6 /* Frameworks */,
-				D1BE13186B391A735F02412D7203ACCE /* Support Files */,
+				4A85C057C3D645E9C1F6D4B0E0930CCA /* Frameworks */,
 			);
-			name = FBAEMKit;
-			path = FBAEMKit;
-			sourceTree = "<group>";
-		};
-		C1350D892E761FF904ADAA79EAD3C24F /* FBSDKCoreKit */ = {
-			isa = PBXGroup;
-			children = (
-				3BE8FF07AA11B0BF05185B560A88E030 /* Frameworks */,
-				6F20AEDD2C6F0671C1F81F632FF47841 /* Support Files */,
-			);
-			name = FBSDKCoreKit;
-			path = FBSDKCoreKit;
-			sourceTree = "<group>";
-		};
-		C3538CE976E191B9C21739C61D665A20 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				AAB02F7D69D7E8C892912618322C911B /* FBAEMKit */,
-				C1350D892E761FF904ADAA79EAD3C24F /* FBSDKCoreKit */,
-				E2184F406373DB379D306E740D77C550 /* FBSDKCoreKit_Basics */,
-			);
-			name = Pods;
+			name = Main;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -229,27 +301,24 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				C3538CE976E191B9C21739C61D665A20 /* Pods */,
+				14CC81A2F04B1C0DF7670539A79B9C82 /* Pods */,
 				3EC92D2875E7CEC05F0A94D0B10790C0 /* Products */,
 				F2D6A8AF7B76DCC0137F41569A9620EF /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		D1BE13186B391A735F02412D7203ACCE /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				CD02CDF8FFF2A2908196ED48B846AF1F /* FBAEMKit-xcframeworks.sh */,
-				B4412E2C4158C364F87F5C657B439D30 /* FBAEMKit.debug.xcconfig */,
-				67215E9DB51D21AA3070DBC53867177B /* FBAEMKit.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/FBAEMKit";
 			sourceTree = "<group>";
 		};
 		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D76CC5BB3850B89C15C73B8F11A9FC2B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				458848AEDA3948392A7D8B6851CD9ABA /* FBAEMKit.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -271,16 +340,6 @@
 			path = "Target Support Files/Pods-GameTutorial";
 			sourceTree = "<group>";
 		};
-		E2184F406373DB379D306E740D77C550 /* FBSDKCoreKit_Basics */ = {
-			isa = PBXGroup;
-			children = (
-				A782EF9D0BE5E42456DC70C2EB1E1801 /* Frameworks */,
-				245C73F58264CBC0A58E4BB8DA087A93 /* Support Files */,
-			);
-			name = FBSDKCoreKit_Basics;
-			path = FBSDKCoreKit_Basics;
-			sourceTree = "<group>";
-		};
 		F2D6A8AF7B76DCC0137F41569A9620EF /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -292,11 +351,11 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		2460CF0D0DAE3DADD2399FA1D9A493BF /* Headers */ = {
+		5DA4021B59CE0D78B5D9328F6AE8190A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F176C4BF2236B0C0E113FA066CC3C1B1 /* Pods-GameTutorial-umbrella.h in Headers */,
+				6A1A96728481057DFE9F335EA28E5FC1 /* Pods-GameTutorial-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,19 +364,20 @@
 /* Begin PBXNativeTarget section */
 		2CD9202F6B87E2CE39798C8DE2602BFE /* Pods-GameTutorial */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6A55F067CAF361F0B87EE23FF9FAF085 /* Build configuration list for PBXNativeTarget "Pods-GameTutorial" */;
+			buildConfigurationList = 8E035F75AA67BD48CB9C449920C164A1 /* Build configuration list for PBXNativeTarget "Pods-GameTutorial" */;
 			buildPhases = (
-				2460CF0D0DAE3DADD2399FA1D9A493BF /* Headers */,
-				BFF552531FF00719D89F9B2B69A1D32F /* Sources */,
-				953F8C98FF4FD6959C88ADE75C2618C3 /* Frameworks */,
-				4C61171AE77420BFCFF46073AAE38AAB /* Resources */,
+				5DA4021B59CE0D78B5D9328F6AE8190A /* Headers */,
+				4E3CED4A4192F3B47AD9141620EB17E1 /* Sources */,
+				0C85A9AEFE26BF7E22F9E12C17254AD9 /* Frameworks */,
+				8FB434789C95705205C45032B5D2515E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				A35AEC4D668693BB52BA56A7B55EA47B /* PBXTargetDependency */,
-				C9BC5E28A37B03FF53279DEF040CB2FE /* PBXTargetDependency */,
-				D920CF10626F4652A08F25CA65CBF0E3 /* PBXTargetDependency */,
+				BEECBDEF5B14CC1D301B5A8BC39D697B /* PBXTargetDependency */,
+				B879CD3BE6CA8510010E5F23EEC0F5FB /* PBXTargetDependency */,
+				5581E630280B19F9457EA19B43789443 /* PBXTargetDependency */,
+				89B348DF5F080B21623A3314162B9B04 /* PBXTargetDependency */,
 			);
 			name = "Pods-GameTutorial";
 			productName = Pods_GameTutorial;
@@ -346,6 +406,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				B0B23938B1EBCBAD2419AB6E9D222A0B /* AppsFlyerFramework */,
 				479BDBD165CD08E2159181E58CD2078F /* FBAEMKit */,
 				28907903AF6DD0AD321D92CD660E7E23 /* FBSDKCoreKit */,
 				8EA62FEAB23070050EFD4D4508D659E5 /* FBSDKCoreKit_Basics */,
@@ -355,7 +416,7 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4C61171AE77420BFCFF46073AAE38AAB /* Resources */ = {
+		8FB434789C95705205C45032B5D2515E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -365,7 +426,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		644A7797C26C8C294D5DD8B7956FDF42 /* [CP] Copy XCFrameworks */ = {
+		3848528C72BC011A1D8E8829E8F3E9B0 /* [CP] Copy XCFrameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/AppsFlyerFramework/AppsFlyerFramework-xcframeworks-input-files.xcfilelist",
+			);
+			name = "[CP] Copy XCFrameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/AppsFlyerFramework/AppsFlyerFramework-xcframeworks-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/AppsFlyerFramework/AppsFlyerFramework-xcframeworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7BDF496630B0A561B9C8ED29D667271F /* [CP] Copy XCFrameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -419,57 +497,63 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		BFF552531FF00719D89F9B2B69A1D32F /* Sources */ = {
+		4E3CED4A4192F3B47AD9141620EB17E1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFC553A902B7AA356DF09458CF40972A /* Pods-GameTutorial-dummy.m in Sources */,
+				F9721F59FB172F157BBD347352714B58 /* Pods-GameTutorial-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		29EFE805C41C725464AA7E1873F0E436 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FBAEMKit;
-			target = 479BDBD165CD08E2159181E58CD2078F /* FBAEMKit */;
-			targetProxy = 4DDD5A9D57B996159C63330AAEE39794 /* PBXContainerItemProxy */;
-		};
-		30B1ADACED79735EA7F0039C44B55578 /* PBXTargetDependency */ = {
+		06A0F8F3D8FD3B34AC115CA42B0E09E9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FBSDKCoreKit_Basics;
 			target = 8EA62FEAB23070050EFD4D4508D659E5 /* FBSDKCoreKit_Basics */;
-			targetProxy = C273BD6993C506605FE5A5B9282178B4 /* PBXContainerItemProxy */;
+			targetProxy = D1D16FA100CAEEC442B5762D0E918E5B /* PBXContainerItemProxy */;
 		};
-		A35AEC4D668693BB52BA56A7B55EA47B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FBAEMKit;
-			target = 479BDBD165CD08E2159181E58CD2078F /* FBAEMKit */;
-			targetProxy = 28C4F4553CA02095C75049AF9C803D0D /* PBXContainerItemProxy */;
-		};
-		C9BC5E28A37B03FF53279DEF040CB2FE /* PBXTargetDependency */ = {
+		5581E630280B19F9457EA19B43789443 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FBSDKCoreKit;
 			target = 28907903AF6DD0AD321D92CD660E7E23 /* FBSDKCoreKit */;
-			targetProxy = 95586219A7A6339F137F1ABB455D5C4F /* PBXContainerItemProxy */;
+			targetProxy = B1D494B4BF55A9FAC7A107C661A717E5 /* PBXContainerItemProxy */;
 		};
-		D920CF10626F4652A08F25CA65CBF0E3 /* PBXTargetDependency */ = {
+		89B348DF5F080B21623A3314162B9B04 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FBSDKCoreKit_Basics;
 			target = 8EA62FEAB23070050EFD4D4508D659E5 /* FBSDKCoreKit_Basics */;
-			targetProxy = 12200CC80562AC4F8EDBB833B656B77E /* PBXContainerItemProxy */;
+			targetProxy = 4A53AAFEE5BF9727FBC63A3D47FF99C4 /* PBXContainerItemProxy */;
 		};
-		E442A77547DD43735875DBC2B6D23656 /* PBXTargetDependency */ = {
+		B879CD3BE6CA8510010E5F23EEC0F5FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FBAEMKit;
+			target = 479BDBD165CD08E2159181E58CD2078F /* FBAEMKit */;
+			targetProxy = 12D11C8D36D67AE46CEBAD88179E67B7 /* PBXContainerItemProxy */;
+		};
+		BEECBDEF5B14CC1D301B5A8BC39D697B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AppsFlyerFramework;
+			target = B0B23938B1EBCBAD2419AB6E9D222A0B /* AppsFlyerFramework */;
+			targetProxy = DD08F0C45F9D34F57AB1AC6BDFA3105D /* PBXContainerItemProxy */;
+		};
+		DD1FEA2107F32CC88EF6430C688067D2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FBSDKCoreKit_Basics;
 			target = 8EA62FEAB23070050EFD4D4508D659E5 /* FBSDKCoreKit_Basics */;
-			targetProxy = 5A47EBFC5B1B4B811812D0A8430C5468 /* PBXContainerItemProxy */;
+			targetProxy = 5C86EF64D043F8E0CB957E45CF3D6A87 /* PBXContainerItemProxy */;
+		};
+		E8B93953CF91AC13B91565A6548D0DE3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FBAEMKit;
+			target = 479BDBD165CD08E2159181E58CD2078F /* FBAEMKit */;
+			targetProxy = F733273E4A06271CDA9E05829B061948 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0499DF1438F980F8CFDB12465CF00DE4 /* Release */ = {
+		04CBBD55A0037AFE09F1753E137350B4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 57B4AB00F7B33C14FFA70A384B855AC6 /* Pods-GameTutorial.release.xcconfig */;
 			buildSettings = {
@@ -573,6 +657,43 @@
 			};
 			name = Debug;
 		};
+		4C3E040E72ADD67129B9677793807296 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF54936F2998CA5F44576D6530879CB5 /* Pods-GameTutorial.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-GameTutorial/Pods-GameTutorial-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GameTutorial/Pods-GameTutorial.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		6AF9D8D0B4F4FA4695A8EEF773CD3FBC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -635,46 +756,9 @@
 			};
 			name = Release;
 		};
-		7A43C8657B089479478BD8141A059F5E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BF54936F2998CA5F44576D6530879CB5 /* Pods-GameTutorial.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-GameTutorial/Pods-GameTutorial-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-GameTutorial/Pods-GameTutorial.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		87A17A0F6F3D6216BB24A302C916AFEA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DFFE2B7096BA397D99492EFE93938633 /* FBSDKCoreKit.debug.xcconfig */;
+			baseConfigurationReference = 5744F0CA7C0585767823DB922E3BDB69 /* FBSDKCoreKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -689,32 +773,13 @@
 			};
 			name = Debug;
 		};
-		AED7F817F5D7215DFD20F0B3C528F1E3 /* Release */ = {
+		AD6EEAB16B1094B8219957A73E34E6E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DE385D2F1BE20B7670AC076A2E806FC2 /* FBSDKCoreKit_Basics.release.xcconfig */;
+			baseConfigurationReference = 98F3FB2EC6D6D74AFC3FD154F071D835 /* AppsFlyerFramework.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		B2825D29380778CB9CE5C90433B1553D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9EE8E29D1D10C6D2DDBDE9A6544C541A /* FBSDKCoreKit_Basics.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -726,7 +791,7 @@
 		};
 		B8E9C3F165EDA406C4A74EF1D7365848 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 682787CB46805B05FD5C7DE5AB608AC2 /* FBSDKCoreKit.release.xcconfig */;
+			baseConfigurationReference = 98A54503DEA9317DD1E9A788002DA07D /* FBSDKCoreKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -742,14 +807,48 @@
 			};
 			name = Release;
 		};
-		C7A89185288428C6C21418C0FD7AF473 /* Release */ = {
+		C1351922E93EDC7180A1D9BB0AE15D41 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 67215E9DB51D21AA3070DBC53867177B /* FBAEMKit.release.xcconfig */;
+			baseConfigurationReference = EAF2839F9C043D4D742955441B6888CD /* FBSDKCoreKit_Basics.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C7A89185288428C6C21418C0FD7AF473 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F381F77DD407E06F438B25B6D11FEF43 /* FBAEMKit.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DA265AE8906ED89A438BA8A76A6E6B17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4620927D563B4A2D546876A8F6EFF17E /* AppsFlyerFramework.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -762,7 +861,7 @@
 		};
 		ECCAED711EEBF5A108A2FD390DF165E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B4412E2C4158C364F87F5C657B439D30 /* FBAEMKit.debug.xcconfig */;
+			baseConfigurationReference = 57570CBAF44F4D5FEAD7DD5EC7501A78 /* FBAEMKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -777,9 +876,36 @@
 			};
 			name = Debug;
 		};
+		F9325528D9890D0FCBC7E4D95462E21C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A9192967DBA6E9D75389476FC36E579 /* FBSDKCoreKit_Basics.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0D1FA58CB835029E5EFDFE335BBB275D /* Build configuration list for PBXAggregateTarget "AppsFlyerFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD6EEAB16B1094B8219957A73E34E6E0 /* Debug */,
+				DA265AE8906ED89A438BA8A76A6E6B17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		442545805DAF10650DBA7C00DEAAD47B /* Build configuration list for PBXAggregateTarget "FBAEMKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -798,11 +924,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6A55F067CAF361F0B87EE23FF9FAF085 /* Build configuration list for PBXNativeTarget "Pods-GameTutorial" */ = {
+		8E035F75AA67BD48CB9C449920C164A1 /* Build configuration list for PBXNativeTarget "Pods-GameTutorial" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7A43C8657B089479478BD8141A059F5E /* Debug */,
-				0499DF1438F980F8CFDB12465CF00DE4 /* Release */,
+				4C3E040E72ADD67129B9677793807296 /* Debug */,
+				04CBBD55A0037AFE09F1753E137350B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -816,11 +942,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E714E0206C9DA698AE792CA6C027BB4B /* Build configuration list for PBXAggregateTarget "FBSDKCoreKit_Basics" */ = {
+		F8EF219BAE36F584E0BB5C68C46C42E4 /* Build configuration list for PBXAggregateTarget "FBSDKCoreKit_Basics" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B2825D29380778CB9CE5C90433B1553D /* Debug */,
-				AED7F817F5D7215DFD20F0B3C528F1E3 /* Release */,
+				C1351922E93EDC7180A1D9BB0AE15D41 /* Debug */,
+				F9325528D9890D0FCBC7E4D95462E21C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
