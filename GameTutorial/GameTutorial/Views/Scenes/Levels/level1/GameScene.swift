@@ -147,6 +147,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.sprite.physicsBody?.isDynamic = false
+        self.sprite.physicsBody?.pinned = true
         self.sprite = nil
     }
     
@@ -165,6 +167,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             item == 14 ? winningGame() : print("fff")
             guard sprite != nil else { return }
             sprite.physicsBody?.pinned = true
+            sprite.physicsBody?.isDynamic = false
         }
     }
     
