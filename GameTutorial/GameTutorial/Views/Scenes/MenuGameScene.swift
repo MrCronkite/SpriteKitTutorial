@@ -95,7 +95,7 @@ class MenuGameScene: SKScene {
         let scale = SKAction.scale(to: 0.9, duration: 0.1)
         let sequence = SKAction.sequence([scale])
         buttonPlay.run(sequence)
-        let arreyKey = [scoreGame2, scoreGame]
+        let arreyKey = [scoreGame2, scoreGame, scoreGame, scoreGame]
         for key in arreyKey {
             let score = UserDefaults.standard.integer(forKey: key)
             if score == 0 {

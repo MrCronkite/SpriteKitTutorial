@@ -30,6 +30,7 @@
 		684F386D40AF1D486B29AD21 /* Pods-GameTutorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameTutorial.debug.xcconfig"; path = "Target Support Files/Pods-GameTutorial/Pods-GameTutorial.debug.xcconfig"; sourceTree = "<group>"; };
 		6EDBCF7BB5B940BFCD4212E6 /* Pods-GameTutorial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameTutorial.release.xcconfig"; path = "Target Support Files/Pods-GameTutorial/Pods-GameTutorial.release.xcconfig"; sourceTree = "<group>"; };
 		800C5FB0DC246159F909B62D /* Pods_GameTutorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameTutorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B228CEF729ABDE2A008F54A2 /* GameTutorial.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GameTutorial.entitlements; sourceTree = "<group>"; };
 		B254EBD8299D48EE005B5FC0 /* GameTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B254EBDB299D48EE005B5FC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B254EBDD299D48EE005B5FC0 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -93,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				B260AA8F29A936A200A0E58B /* Info.plist */,
+				B228CEF729ABDE2A008F54A2 /* GameTutorial.entitlements */,
 				B260AA8B29A9268600A0E58B /* Managers */,
 				B2B9DC1A29A006DC005E6FC9 /* Support Files */,
 				B268609B29A2AA8800303C69 /* Views */,

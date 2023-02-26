@@ -49,7 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate: AppsFlyerLibDelegate {
     func onConversionDataFail(_ error: Error) {
-        <#code#>
+        print("")
     }
     
      // Метод вызывается при переходе по ссылке, если приложение не было ранее установлено и пользователь попал в него после установки из AppStore

@@ -28,8 +28,8 @@ class GameViewController: UIViewController {
             if let scene = SKScene(fileNamed: "MenuGameScene") {
                 scene.scaleMode = .aspectFill
                 let bounds = UIScreen.main.bounds
-                scene.size = CGSize(width: bounds.size.width, height: bounds.size.height)
-                
+                scene.size = CGSize(width: bounds.size.height, height: bounds.size.width)
+                print(scene.size)
                 view.presentScene(scene)
             }
             

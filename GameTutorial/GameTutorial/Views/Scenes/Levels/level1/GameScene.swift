@@ -90,24 +90,28 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     @objc func swipeDown(sender: UISwipeGestureRecognizer) {
         guard sprite != nil else { return }
         let moveSprite = SKAction.move(by: CGVector(dx: 0, dy: -101), duration: 0.3)
+        sprite.physicsBody?.isDynamic = true
         sprite.run(moveSprite)
     }
     
     @objc func swipeUp(sender: UISwipeGestureRecognizer) {
         guard sprite != nil else { return }
         let moveSprite = SKAction.move(by: CGVector(dx: 0, dy: 101), duration: 0.3)
+        sprite.physicsBody?.isDynamic = true
         sprite.run(moveSprite)
     }
 
     @objc func swipeRight(sender: UISwipeGestureRecognizer) {
         guard sprite != nil else { return }
         let moveSprite = SKAction.move(by: CGVector(dx: 130, dy: 0), duration: 0.3)
+        sprite.physicsBody?.isDynamic = true
         sprite.run(moveSprite)
     }
     
     @objc func swipeLeft(sender: UISwipeGestureRecognizer) {
         guard sprite != nil else { return }
         let moveSprite = SKAction.move(by: CGVector(dx: -130, dy: 0), duration: 0.3)
+        sprite.physicsBody?.isDynamic = true
         sprite.run(moveSprite)
     }
     
