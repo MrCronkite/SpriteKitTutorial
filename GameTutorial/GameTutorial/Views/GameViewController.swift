@@ -17,14 +17,6 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if AccessToken.current != nil {
-            GraphRequest(graphPath: "me").start { connection, result, error in
-                if let result = result {
-                    print("Fetched Result: \(result)")
-                }
-            }
-        }
-        
         if let view = self.view as! SKView? {
             if let scene = SKScene(fileNamed: "MenuGameScene") {
                 scene.scaleMode = .aspectFill
