@@ -9,13 +9,17 @@ import UIKit
 import AppsFlyerLib
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate{
 
     var window: UIWindow?
 
     var orientation: UIInterfaceOrientationMask = .landscape
     
     func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+        
+        AppsFlyerLib.shared().deepLinkDelegate = self
+        
+        
         return orientation
     }
     
@@ -47,19 +51,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 
-extension AppDelegate: AppsFlyerLibDelegate {
-    func onConversionDataFail(_ error: Error) {
-        print("")
+extension AppDelegate: DeepLinkDelegate, AppsFlyerLibDelegate{
+    func onConversionDataSuccess(_ conversionInfo: [AnyHashable : Any]) {
+        <#code#>
     }
     
-     // Метод вызывается при переходе по ссылке, если приложение не было ранее установлено и пользователь попал в него после установки из AppStore
-    func onConversionDataSuccess(_ conversionInfo: [AnyHashable : Any]) {
-    // Проверяем, что ссылка была впервые открыта, используется, чтобы не было ложных срабатываний при последующих запусках приложения
-        guard let is_first_launch = conversionInfo["is_first_launch"] as? Bool, is_first_launch else { return }
-    // Извлекаем из словаря conversionInfo указанные при создании ссылки параметры и передаем их в обработчик
-    }
-   // Метод вызывается при переходе по ссылке если приложение установлено
-    func onAppOpenAttribution(_ attributionData: [AnyHashable: Any]) {
-   // Извлекаем из словаря attributionData указанные при создании ссылки параметры и передаем их в обработчик
+    func onConversionDataFail(_ error: Error) {
+        <#code#>
     }
 }
