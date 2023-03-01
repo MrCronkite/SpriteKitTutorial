@@ -10,7 +10,7 @@ import AppsFlyerLib
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate{
-
+    var ConversionData: [AnyHashable: Any]? = nil
     var window: UIWindow?
 
     var orientation: UIInterfaceOrientationMask = .landscape
@@ -46,17 +46,73 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
+    
+    fileprivate func walkToSceneWithParams(fruitName: String, deepLinkData: [String: Any]?) {
+//           let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//           UIApplication.shared.windows.first?.rootViewController?.dismiss(animated: true, completion: nil)
+//
+//           let destVC = fruitName + "_vc"
+//           if let newVC = storyBoard.instantiateVC(withIdentifier: destVC) {
+//
+//               NSLog("[AFSDK] AppsFlyer routing to section: \(destVC)")
+//               newVC.deepLinkData = deepLinkData
+//
+//                UIApplication.shared.windows.first?.rootViewController?.present(newVC, animated: true, completion: nil)
+//           } else {
+//               NSLog("[AFSDK] AppsFlyer: could not find section: \(destVC)")
+//           }
+       }
 
 
 }
 
 
-extension AppDelegate: DeepLinkDelegate, AppsFlyerLibDelegate{
-    func onConversionDataSuccess(_ conversionInfo: [AnyHashable : Any]) {
-        <#code#>
+extension AppDelegate: DeepLinkDelegate{
+    
+}
+
+extension AppDelegate: AppsFlyerLibDelegate {
+     
+    // Handle Organic/Non-organic installation
+    func onConversionDataSuccess(_ data: [AnyHashable: Any]) {
+        ConversionData = data
+        print("onConversionDataSuccess data:")
+        for (key, value) in data {
+            print(key, ":", value)
+        }
+        if let conversionData = data as NSDictionary? as! [String:Any]? {
+        
+            if let status = conversionData["af_status"] as? String {
+                if (status == "Non-organic") {
+                    if let sourceID = conversionData["media_source"],
+                        let campaign = conversionData["campaign"] {
+                        NSLog("[AFSDK] This is a Non-Organic install. Media source: \(sourceID)  Campaign: \(campaign)")
+                    }
+                } else {
+                    NSLog("[AFSDK] This is an organic install.")
+                }
+                
+                if let is_first_launch = conversionData["is_first_launch"] as? Bool,
+                    is_first_launch {
+                    NSLog("[AFSDK] First Launch")
+                    if !conversionData.keys.contains("deep_link_value") && conversionData.keys.contains("fruit_name"){
+                        switch conversionData["fruit_name"] {
+                            case let fruitNameStr as String:
+                            NSLog("This is a deferred deep link opened using conversion data")
+                            walkToSceneWithParams(fruitName: fruitNameStr, deepLinkData: conversionData)
+                            default:
+                                NSLog("Could not extract deep_link_value or fruit_name from deep link object using conversion data")
+                                return
+                        }
+                    }
+                } else {
+                    NSLog("[AFSDK] Not First Launch")
+                }
+            }
+        }
     }
     
     func onConversionDataFail(_ error: Error) {
-        <#code#>
+        NSLog("[AFSDK] \(error)")
     }
 }
