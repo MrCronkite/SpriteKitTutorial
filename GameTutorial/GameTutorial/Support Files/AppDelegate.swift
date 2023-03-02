@@ -10,22 +10,17 @@ import AppsFlyerLib
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate{
-    var ConversionData: [AnyHashable: Any]? = nil
     var window: UIWindow?
 
     var orientation: UIInterfaceOrientationMask = .landscape
     
     func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
         
-        AppsFlyerLib.shared().deepLinkDelegate = self
-        
         
         return orientation
     }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-        AppsFlyerLib.shared().delegate = self
         
         return true
     }
