@@ -42,21 +42,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
     
-    fileprivate func walkToSceneWithParams(fruitName: String, deepLinkData: [String: Any]?) {
-//           let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//           UIApplication.shared.windows.first?.rootViewController?.dismiss(animated: true, completion: nil)
-//
-//           let destVC = fruitName + "_vc"
-//           if let newVC = storyBoard.instantiateVC(withIdentifier: destVC) {
-//
-//               NSLog("[AFSDK] AppsFlyer routing to section: \(destVC)")
-//               newVC.deepLinkData = deepLinkData
-//
-//                UIApplication.shared.windows.first?.rootViewController?.present(newVC, animated: true, completion: nil)
-//           } else {
-//               NSLog("[AFSDK] AppsFlyer: could not find section: \(destVC)")
-//           }
-       }
 
 
 }
