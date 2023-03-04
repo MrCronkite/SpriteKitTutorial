@@ -41,58 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
-    
-
 
 }
 
 
-extension AppDelegate: DeepLinkDelegate{
-    
-}
-
-extension AppDelegate: AppsFlyerLibDelegate {
-     
-    // Handle Organic/Non-organic installation
-    func onConversionDataSuccess(_ data: [AnyHashable: Any]) {
-        ConversionData = data
-        print("onConversionDataSuccess data:")
-        for (key, value) in data {
-            print(key, ":", value)
-        }
-        if let conversionData = data as NSDictionary? as! [String:Any]? {
-        
-            if let status = conversionData["af_status"] as? String {
-                if (status == "Non-organic") {
-                    if let sourceID = conversionData["media_source"],
-                        let campaign = conversionData["campaign"] {
-                        NSLog("[AFSDK] This is a Non-Organic install. Media source: \(sourceID)  Campaign: \(campaign)")
-                    }
-                } else {
-                    NSLog("[AFSDK] This is an organic install.")
-                }
-                
-                if let is_first_launch = conversionData["is_first_launch"] as? Bool,
-                    is_first_launch {
-                    NSLog("[AFSDK] First Launch")
-                    if !conversionData.keys.contains("deep_link_value") && conversionData.keys.contains("fruit_name"){
-                        switch conversionData["fruit_name"] {
-                            case let fruitNameStr as String:
-                            NSLog("This is a deferred deep link opened using conversion data")
-                            walkToSceneWithParams(fruitName: fruitNameStr, deepLinkData: conversionData)
-                            default:
-                                NSLog("Could not extract deep_link_value or fruit_name from deep link object using conversion data")
-                                return
-                        }
-                    }
-                } else {
-                    NSLog("[AFSDK] Not First Launch")
-                }
-            }
-        }
-    }
-    
-    func onConversionDataFail(_ error: Error) {
-        NSLog("[AFSDK] \(error)")
-    }
-}
