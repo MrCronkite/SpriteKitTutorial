@@ -15,7 +15,6 @@ class LevelsScene: SKScene{
     var background = SKSpriteNode(imageNamed: "bgImage")
     var scrolView: SKSpriteNode!
     var buttonBackNode = SKSpriteNode(imageNamed: "backPage")
-   // var starNode: SKSpriteNode!
     
     override func didMove(to view: SKView) {
         let bounds = UIScreen.main.bounds
