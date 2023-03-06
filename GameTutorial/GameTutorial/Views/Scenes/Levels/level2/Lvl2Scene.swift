@@ -98,7 +98,7 @@ class Lvl2Scene: SKScene, SKPhysicsContactDelegate {
         let moveSprite = SKAction.move(by: CGVector(dx: 0, dy: 101), duration: 0.3)
         sprite.run(moveSprite)
     }
-
+    
     @objc func swipeRight(sender: UISwipeGestureRecognizer) {
         guard sprite != nil else { return }
         let moveSprite = SKAction.move(by: CGVector(dx: 130, dy: 0), duration: 0.3)
@@ -119,7 +119,7 @@ class Lvl2Scene: SKScene, SKPhysicsContactDelegate {
                     let bounds = UIScreen.main.bounds
                     scene.size = CGSize(width: bounds.size.width, height: bounds.size.height)
                     scene.scaleMode = .aspectFill
-
+                    
                     view.presentScene(scene, transition: .moveIn(with: .down, duration: 1))
                 }
                 view.ignoresSiblingOrder = true
@@ -158,7 +158,7 @@ class Lvl2Scene: SKScene, SKPhysicsContactDelegate {
                     }
                 }
             }
-            item == 14 ? winningGame() : print("а")
+            if item == 14 { winningGame() }
             guard sprite != nil else { return }
             sprite.physicsBody?.pinned = true
         }
@@ -182,7 +182,6 @@ class Lvl2Scene: SKScene, SKPhysicsContactDelegate {
             }
         }
     }
-    
     
     //MARK: - Private Key
     private let scoreGame2 = "Lvl2Scene"
