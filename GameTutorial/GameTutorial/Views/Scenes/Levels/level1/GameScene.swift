@@ -100,7 +100,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         sprite.physicsBody?.isDynamic = true
         sprite.run(moveSprite)
     }
-
+    
     @objc func swipeRight(sender: UISwipeGestureRecognizer) {
         guard sprite != nil else { return }
         let moveSprite = SKAction.move(by: CGVector(dx: 130, dy: 0), duration: 0.3)
@@ -123,7 +123,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     let bounds = UIScreen.main.bounds
                     scene.size = CGSize(width: bounds.size.width, height: bounds.size.height)
                     scene.scaleMode = .aspectFill
-
+                    
                     view.presentScene(scene, transition: .moveIn(with: .down, duration: 1))
                 }
                 view.ignoresSiblingOrder = true
@@ -164,7 +164,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     }
                 }
             }
-            item == 14 ? winningGame() : print("fff")
+            if item == 14 { winningGame() }
             guard sprite != nil else { return }
             sprite.physicsBody?.pinned = true
             sprite.physicsBody?.isDynamic = false
@@ -172,7 +172,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func winningGame(){
-        print("win")
         timer.invalidate()
         self.addChild(nodeShow)
         gridX.alpha = 0
@@ -190,7 +189,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
     }
-    
     
     //MARK: - Private Key
     private let scoreGame = "GameScene"

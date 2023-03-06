@@ -56,7 +56,7 @@ class MenuGameScene: SKScene {
             print("error")
         }
         
-        //player.play()
+        player.play()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

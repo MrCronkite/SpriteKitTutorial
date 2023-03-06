@@ -8,11 +8,8 @@
 import UIKit
 import SpriteKit
 import GameplayKit
-import FBSDKCoreKit
 
 class GameViewController: UIViewController {
-    
-    let appsflyerKey = "KdeD7D78mvpiqkaqFLATn7"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,14 +19,12 @@ class GameViewController: UIViewController {
                 scene.scaleMode = .aspectFill
                 let bounds = UIScreen.main.bounds
                 scene.size = CGSize(width: bounds.size.width, height: bounds.size.height)
-                print(scene.size)
                 view.presentScene(scene)
             }
-            
             view.ignoresSiblingOrder = true
         }
     }
-
+    
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         if UIDevice.current.userInterfaceIdiom == .phone {
             return .allButUpsideDown
@@ -37,7 +32,7 @@ class GameViewController: UIViewController {
             return .all
         }
     }
-
+    
     override var prefersStatusBarHidden: Bool {
         return true
     }

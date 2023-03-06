@@ -43,8 +43,6 @@ class LevelsScene: SKScene{
                 star.texture = SKTexture(imageNamed: "starWin")
             }
         }
-        
-      
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -55,8 +53,8 @@ class LevelsScene: SKScene{
                 if node.name == "back"{
                     openMenu()
                 }
-                }
             }
+        }
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -75,7 +73,7 @@ class LevelsScene: SKScene{
                 let bounds = UIScreen.main.bounds
                 scene.size = CGSize(width: bounds.size.width, height: bounds.size.height)
                 scene.scaleMode = .aspectFill
-
+                
                 view.presentScene(scene, transition: .moveIn(with: .down, duration: 1))
             }
             view.ignoresSiblingOrder = true
